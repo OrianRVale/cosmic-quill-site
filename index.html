@@ -1,1 +1,114 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Quill | Publisher</title>
+    <style>
+        body {
+            background: #111;
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 32px 8vw 16px 8vw;
+            background: #181818;
+            border-bottom: 1px solid #292929;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: gold;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 28px;
+            font-size: 1.08rem;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: gold;
+        }
+        .hero {
+            text-align: center;
+            padding: 90px 6vw 48px 6vw;
+        }
+        .hero-title {
+            font-size: 2.5rem;
+            letter-spacing: 1.2px;
+            margin-bottom: 18px;
+            color: gold;
+        }
+        .hero-sub {
+            font-size: 1.3rem;
+            margin-bottom: 36px;
+            color: #e0e0e0;
+        }
+        .cta-btn {
+            padding: 14px 38px;
+            font-size: 1.14rem;
+            background: gold;
+            color: #111;
+            border: none;
+            border-radius: 32px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            box-shadow: 0 2px 16px 0 rgba(255, 215, 0, 0.08);
+        }
+        .cta-btn:hover {
+            background: #ffd700cc;
+        }
+        footer {
+            text-align: center;
+            padding: 32px 0 24px 0;
+            background: #181818;
+            color: #999;
+            font-size: 0.92rem;
+        }
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px 6vw 12px 6vw;
+            }
+            nav {
+                margin-top: 12px;
+            }
+            .hero {
+                padding-top: 48px;
+            }
+            .hero-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Cosmic Quill</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#books">Books</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero" id="home">
+        <div class="hero-title">Publisher of Visionary Fiction & Esoteric Truth</div>
+        <div class="hero-sub">Launching <b>Bloodline Watchers</b><br>by Orion R. Vale</div>
+        <button class="cta-btn" onclick="window.open('https://link-to-book-or-tiktok','_blank')">Discover the Book</button>
+    </section>
+    <footer>
+        © 2025 Cosmic Quill LLC. All rights reserved.<br>
+        <span style="font-size:0.9em;">Signal-borne fiction. Rooted in spirit.</span>
+    </footer>
+</body>
+</html>
