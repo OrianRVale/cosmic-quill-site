@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmic Quill | Publisher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            background: #111;
+            background: radial-gradient(ellipse at top left, #1d2238 60%, #111 100%), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background-size: cover;
             color: #fff;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Montserrat', Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -16,77 +20,116 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 32px 8vw 16px 8vw;
-            background: #181818;
-            border-bottom: 1px solid #292929;
+            padding: 40px 8vw 16px 8vw;
+            background: rgba(18, 18, 22, 0.87);
+            border-bottom: 1.5px solid #2b2a2f;
+            box-shadow: 0 2px 32px 0 rgba(0,0,0,0.11);
         }
         .logo {
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: gold;
+            font-family: 'Unbounded', 'Montserrat', Arial, sans-serif;
+            font-size: 2.35rem;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+            color: #ffd700;
+            text-shadow: 0 0 10px #ffd70040;
+            filter: drop-shadow(0 1px 8px #8a7400);
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin-left: 28px;
-            font-size: 1.08rem;
-            transition: color 0.2s;
+            margin-left: 38px;
+            font-size: 1.18rem;
+            font-family: 'Montserrat', Arial, sans-serif;
+            transition: color 0.16s;
+            text-shadow: 0 2px 6px #000;
+            letter-spacing: 1.2px;
         }
         nav a:hover {
-            color: gold;
+            color: #ffd700;
         }
         .hero {
             text-align: center;
-            padding: 90px 6vw 48px 6vw;
+            padding: 110px 6vw 62px 6vw;
+            position: relative;
+        }
+        .hero:before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(180deg, #222b 0%, #111e 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
         .hero-title {
-            font-size: 2.5rem;
-            letter-spacing: 1.2px;
-            margin-bottom: 18px;
-            color: gold;
+            font-family: 'Unbounded', Arial, sans-serif;
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: 2.4px;
+            margin-bottom: 32px;
+            color: #ffd700;
+            text-shadow: 0 4px 38px #0a0100cc, 0 2px 14px #ffe7a1b8;
         }
         .hero-sub {
-            font-size: 1.3rem;
-            margin-bottom: 36px;
-            color: #e0e0e0;
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 44px;
+            color: #f7ebc9;
+            text-shadow: 0 2px 14px #080202a8;
         }
         .cta-btn {
-            padding: 14px 38px;
-            font-size: 1.14rem;
-            background: gold;
+            padding: 18px 50px;
+            font-size: 1.25rem;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(90deg, #ffd700 0%, #ffe27a 100%);
             color: #111;
             border: none;
-            border-radius: 32px;
-            font-weight: 600;
+            border-radius: 42px;
+            font-weight: 700;
             cursor: pointer;
-            transition: background 0.2s, color 0.2s;
-            box-shadow: 0 2px 16px 0 rgba(255, 215, 0, 0.08);
+            transition: background 0.22s, color 0.22s, box-shadow 0.14s;
+            box-shadow: 0 8px 32px 0 #000c, 0 2px 18px 0 #ffd70044;
+            letter-spacing: 1.2px;
+            filter: drop-shadow(0 2px 12px #ffeaa033);
         }
         .cta-btn:hover {
-            background: #ffd700cc;
+            background: linear-gradient(90deg, #ffe27a 0%, #ffd700 100%);
+            color: #222;
+            box-shadow: 0 10px 44px 0 #ffd70055, 0 2px 20px 0 #111c;
         }
         footer {
             text-align: center;
-            padding: 32px 0 24px 0;
-            background: #181818;
-            color: #999;
-            font-size: 0.92rem;
+            padding: 44px 0 24px 0;
+            background: rgba(18, 18, 22, 0.93);
+            color: #e7c969;
+            font-size: 1.02rem;
+            border-top: 1px solid #2b2a2f;
+            letter-spacing: 0.5px;
         }
-        @media (max-width: 600px) {
+        .footer-tag {
+            font-size: 0.92em;
+            color: #ffe7a1;
+            margin-top: 10px;
+            display: block;
+            letter-spacing: 0.6px;
+        }
+        @media (max-width: 650px) {
             header {
                 flex-direction: column;
                 align-items: flex-start;
-                padding: 24px 6vw 12px 6vw;
+                padding: 22px 6vw 10px 6vw;
             }
             nav {
-                margin-top: 12px;
+                margin-top: 10px;
             }
             .hero {
-                padding-top: 48px;
+                padding-top: 62px;
             }
             .hero-title {
-                font-size: 1.6rem;
+                font-size: 1.65rem;
             }
         }
     </style>
@@ -102,13 +145,15 @@
         </nav>
     </header>
     <section class="hero" id="home">
-        <div class="hero-title">Publisher of Visionary Fiction & Esoteric Truth</div>
-        <div class="hero-sub">Launching <b>Bloodline Watchers</b><br>by Orion R. Vale</div>
-        <button class="cta-btn" onclick="window.open('https://link-to-book-or-tiktok','_blank')">Discover the Book</button>
+        <div class="hero-content">
+            <div class="hero-title">Publisher of Visionary Fiction & Esoteric Truth</div>
+            <div class="hero-sub">Launching <b>Bloodline Watchers</b><br>by Orion R. Vale</div>
+            <button class="cta-btn" onclick="window.open('https://link-to-book-or-tiktok','_blank')">Discover the Book</button>
+        </div>
     </section>
     <footer>
         © 2025 Cosmic Quill LLC. All rights reserved.<br>
-        <span style="font-size:0.9em;">Signal-borne fiction. Rooted in spirit.</span>
+        <span class="footer-tag">Signal-borne fiction. Rooted in spirit.</span>
     </footer>
 </body>
 </html>
