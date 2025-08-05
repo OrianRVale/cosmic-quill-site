@@ -2,83 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cosmic Quill™ LLC</title>
   <style>
     body {
       margin: 0;
+      padding: 0;
       background-color: #000;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .logo-small {
-      height: 40px;
-      margin-right: 10px;
-    }
-
-    .title {
-      font-size: 1.4rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
-
-    .center-container {
+      color: #ffffff;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 80vh;
-      text-align: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    header {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    header span {
+      color: #ffffff;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
     }
 
     .logo-spin {
-      width: 250px;
+      width: 300px;
       height: auto;
-      animation: spin 12s linear infinite;
+      animation: spin 30s linear infinite;
     }
 
     @keyframes spin {
       from { transform: rotateY(0deg); }
-      to   { transform: rotateY(360deg); }
+      to { transform: rotateY(360deg); }
     }
 
-    .button-container {
-      margin-top: 30px;
+    .buttons {
+      display: flex;
+      gap: 30px;
     }
 
     .btn {
-      background-color: #111;
-      color: #fff;
-      border: 1px solid #555;
+      background: transparent;
+      color: #ffffff;
+      border: 2px solid #ffffff;
       padding: 12px 24px;
-      margin: 10px;
-      text-decoration: none;
-      font-size: 1rem;
-      cursor: not-allowed;
-      opacity: 0.5;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffffff;
+      color: #000000;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="cosmicquill_spin.gif" alt="Cosmic Quill Logo" class="logo-small" />
-    <div class="title">Cosmic Quill™ LLC</div>
+    <span>Cosmic Quill™ LLC</span>
   </header>
 
-  <div class="center-container">
-    <img src="cosmicquill_spin.gif" alt="Spinning Coin Logo" class="logo-spin" />
-    
-    <div class="button-container">
-      <a class="btn" title="Coming Soon">Store</a>
-      <a class="btn" title="Coming Soon">Book Purchase</a>
+  <div class="logo-container">
+    <img src="cosmicquill_spin.gif" alt="Cosmic Quill Spinning Logo" class="logo-spin" />
+    <div class="buttons">
+      <button class="btn" disabled>Store — Coming Soon</button>
+      <button class="btn" disabled>Book — Coming Soon</button>
     </div>
   </div>
 </body>
