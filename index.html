@@ -2,66 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cosmic Quill™ LLC</title>
   <style>
     body {
-      background-color: #000;
-      color: #d4af37;
-      font-family: 'Georgia', serif;
       margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    .container {
+      background-color: black;
+      font-family: 'Georgia', serif;
+      color: #d4af37;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      gap: 30px;
+      text-align: center;
+    }
+
+    img.logo {
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 30px;
     }
 
     h1 {
-      font-size: 3em;
-      letter-spacing: 2px;
+      font-size: 3rem;
+      margin: 0;
     }
 
-    img {
-      width: 300px;
-      max-width: 90vw;
+    p.tagline {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      color: #e6c878;
+    }
+
+    p.description {
+      max-width: 600px;
+      font-size: 1rem;
+      color: #c9b472;
+      line-height: 1.6;
+      margin-bottom: 40px;
     }
 
     .buttons {
-      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    .button {
-      background: none;
-      border: 2px solid #d4af37;
+    .buttons a {
+      text-decoration: none;
+      background-color: transparent;
+      border: 1px solid #d4af37;
       color: #d4af37;
       padding: 12px 24px;
-      font-size: 1.1em;
-      margin: 10px;
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    .button:hover {
-      background: #d4af37;
-      color: #000;
+    .buttons a:hover {
+      background-color: #d4af37;
+      color: black;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>COSMIC QUILL™ LLC</h1>
-    <img src="FFB9B680-D1DE-40D7-92C3-A174CAAE25F4.png" alt="Cosmic Quill Coin" />
-    <div class="buttons">
-      <button class="button" onclick="window.location.href='https://thebloodlinewatchers.com'">Read the Book</button>
-      <button class="button" onclick="window.location.href='mailto:info@cosmicquill.pub'">Contact</button>
-    </div>
+  <img src="FFB9B680-D1DE-40D7-92C3-A174CAAE25F4.png" alt="Cosmic Quill Logo" class="logo"/>
+
+  <h1>Cosmic Quill™ LLC</h1>
+  <p class="tagline">Where Vision Becomes Myth</p>
+  <p class="description">
+    Cosmic Quill™ is an independent publishing company exploring myth, memory, and meaning across fiction, nonfiction, and immersive media. Home of the *Bloodline Watchers* and dedicated to truth wrapped in story, we publish what endures.
+  </p>
+
+  <div class="buttons">
+    <a href="https://thebloodlinewatchers.com" target="_blank">Explore Bloodline Watchers</a>
+    <a href="mailto:contact@cosmicquill.pub">Contact Cosmic Quill</a>
   </div>
 </body>
 </html>
