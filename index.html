@@ -2,84 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cosmic Quill™ LLC</title>
   <style>
     body {
       margin: 0;
       background-color: #000;
+      color: #f5e4b8;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #fff;
-      overflow-x: hidden;
     }
 
     header {
-      display: flex;
-      align-items: center;
-      padding: 20px;
+      padding: 24px 40px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffd700;
+      letter-spacing: 1.5px;
     }
 
-    .logo-small {
-      height: 40px;
-      margin-right: 10px;
-    }
-
-    .title {
-      font-size: 1.4rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
-
-    .center-container {
+    .container {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 80vh;
       text-align: center;
+      padding: 20px;
     }
 
-    .logo-spin {
-      width: 250px;
+    video.logo-spin {
+      width: 300px;
       height: auto;
-      animation: spin 12s linear infinite;
+      margin-bottom: 40px;
     }
 
-    @keyframes spin {
-      from { transform: rotateY(0deg); }
-      to   { transform: rotateY(360deg); }
-    }
-
-    .button-container {
-      margin-top: 30px;
+    .buttons {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .btn {
-      background-color: #111;
-      color: #fff;
-      border: 1px solid #555;
-      padding: 12px 24px;
-      margin: 10px;
-      text-decoration: none;
+      background: transparent;
+      border: 2px solid #ffeaa0;
+      color: #ffeaa0;
+      padding: 12px 28px;
       font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
       cursor: not-allowed;
-      opacity: 0.5;
+      opacity: 0.6;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="cosmicquill_spin.gif" alt="Cosmic Quill Logo" class="logo-small" />
-    <div class="title">Cosmic Quill™ LLC</div>
-  </header>
 
-  <div class="center-container">
-    <img src="cosmicquill_spin.gif" alt="Spinning Coin Logo" class="logo-spin" />
-    
-    <div class="button-container">
-      <a class="btn" title="Coming Soon">Store</a>
-      <a class="btn" title="Coming Soon">Book Purchase</a>
+  <header>Cosmic Quill™ LLC</header>
+
+  <div class="container">
+    <video class="logo-spin" autoplay muted playsinline>
+      <source src="cosmicquill_spin.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="buttons">
+      <button class="btn">Store — Coming Soon</button>
+      <button class="btn">Book — Coming Soon</button>
     </div>
   </div>
+
 </body>
 </html>
