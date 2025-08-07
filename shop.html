@@ -13,8 +13,13 @@
       margin: 0;
       padding: 0;
     }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
     .logo {
-      margin-top: 30px;
+      margin-top: 20px;
       width: 220px;
       height: auto;
       background-color: #000;
@@ -24,7 +29,11 @@
     h1 {
       font-size: 2rem;
       margin-top: 10px;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
+    }
+    p {
+      color: #ccc;
+      font-size: 1rem;
     }
     .store-link {
       display: inline-block;
@@ -36,33 +45,57 @@
       text-decoration: none;
       border-radius: 6px;
       transition: background 0.3s, color 0.3s;
+      margin-top: 20px;
     }
     .store-link:hover {
       background-color: #d4af37;
       color: #000;
     }
-    .qr {
-      margin-top: 30px;
-      width: 250px;
-      height: auto;
+    .divider {
+      height: 2px;
+      background-color: #333;
+      margin: 40px 0;
+    }
+    .back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: transparent;
+      border: 2px solid #d4af37;
+      color: #d4af37;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+      margin-top: 20px;
+    }
+    .back-button:hover {
+      background-color: #d4af37;
+      color: #000;
     }
   </style>
 </head>
 <body>
 
-  <!-- Updated Logo -->
-  <img src="cosmic_quill_black_bg.png" alt="Cosmic Quill Logo" class="logo">
+  <div class="container">
+    <!-- Updated Logo -->
+    <img src="cosmic_quill_black_bg.png" alt="Cosmic Quill Logo" class="logo">
 
-  <h1>Cosmic Quill™ Store</h1>
+    <h1>Cosmic Quill Die-Cut Sticker</h1>
+    <p>Durable vinyl with the gold Cosmic Quill emblem. Free shipping via Sticker Mule.</p>
 
-  <!-- Direct store link -->
-  <a class="store-link" href="https://www.stickermule.com/cosmicquillstore/item/18649438?origin=PUBLIC_PROFILE" target="_blank">
-    Visit Store
-  </a>
+    <!-- Shop button -->
+    <a class="store-link" href="https://www.stickermule.com/cosmicquillstore/item/18649438?origin=PUBLIC_PROFILE" target="_blank">
+      Shop on Sticker Mule
+    </a>
 
-  <!-- Optional QR code -->
-  <div>
-    <img src="qr_code.png" alt="Scan to visit store" class="qr">
+    <div class="divider"></div>
+
+    <p>Want more items when they go live?</p>
+    <a class="store-link" href="https://www.stickermule.com/cosmicquillstore" target="_blank">
+      Visit the Cosmic Quill Store
+    </a>
+
+    <br><br>
+    <a class="back-button" href="index.html">← Back to Home</a>
   </div>
 
 </body>
