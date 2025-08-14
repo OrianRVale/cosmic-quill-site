@@ -135,24 +135,76 @@
             text-align: center;
         }
 
-        .hero-logo {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .hero-logo:hover {
-            transform: scale(1.02);
-        }
-
-        .hero h1 {
+        /* Horizontal glowing banner like Bloodline Watchers */
+        .cosmic-title {
             font-family: 'Cinzel', serif;
-            font-size: 4rem;
+            font-size: 5rem;
             font-weight: 700;
             color: var(--soft-gold);
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            text-align: center;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2rem 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            text-shadow: 
+                0 0 10px rgba(212, 175, 55, 0.8),
+                0 0 20px rgba(212, 175, 55, 0.6),
+                0 0 30px rgba(212, 175, 55, 0.4),
+                0 0 40px rgba(212, 175, 55, 0.2);
+            animation: bannerGlow 3s ease-in-out infinite alternate;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .cosmic-title::before,
+        .cosmic-title::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--soft-gold), transparent);
+            transform: translateY(-50%);
+        }
+
+        .cosmic-title::before {
+            left: -120px;
+        }
+
+        .cosmic-title::after {
+            right: -120px;
+        }
+
+        @keyframes bannerGlow {
+            from {
+                text-shadow: 
+                    0 0 10px rgba(212, 175, 55, 0.8),
+                    0 0 20px rgba(212, 175, 55, 0.6),
+                    0 0 30px rgba(212, 175, 55, 0.4),
+                    0 0 40px rgba(212, 175, 55, 0.2);
+                border-color: rgba(212, 175, 55, 0.3);
+            }
+            to {
+                text-shadow: 
+                    0 0 15px rgba(212, 175, 55, 1),
+                    0 0 30px rgba(212, 175, 55, 0.8),
+                    0 0 45px rgba(255, 215, 0, 0.6),
+                    0 0 60px rgba(255, 215, 0, 0.4);
+                border-color: rgba(212, 175, 55, 0.6);
+            }
+        }
+
+        .cosmic-title:hover {
+            text-shadow: 
+                0 0 20px rgba(212, 175, 55, 1),
+                0 0 40px rgba(255, 140, 0, 0.9),
+                0 0 60px rgba(255, 69, 0, 0.7),
+                0 0 80px rgba(255, 215, 0, 0.5);
+            border-color: rgba(255, 215, 0, 0.8);
+            transform: scale(1.01);
         }
 
         .hero .tagline {
@@ -384,14 +436,44 @@
             color: var(--ghost-gray);
         }
 
+        /* Header logo effects */
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
+        }
+
+        .logo-img:hover {
+            animation: quickSpin 2s linear infinite;
+            filter: 
+                drop-shadow(0 0 12px rgba(255, 140, 0, 0.8))
+                drop-shadow(0 0 24px rgba(255, 69, 0, 0.6));
+        }
+
+        @keyframes quickSpin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
         /* Mobile responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
 
-            .hero h1 {
-                font-size: 2.5rem;
+            .cosmic-title {
+                font-size: 3rem;
+                letter-spacing: 4px;
+            }
+
+            .cosmic-title::before,
+            .cosmic-title::after {
+                display: none;
             }
 
             .featured-work {
