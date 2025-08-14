@@ -200,68 +200,8 @@
         .rune {
             display: inline-block;
             text-shadow: 0 0 3px rgba(212, 175, 55, 0.6);
-            transition: all 0.5s ease;
+            transition: opacity 0.3s ease;
             position: relative;
-        }
-
-        .rune:nth-child(1) { 
-            animation: runeChange1 8s ease-in-out infinite;
-        }
-        .rune:nth-child(2) { 
-            animation: runeChange2 9s ease-in-out infinite;
-            animation-delay: 1s;
-        }
-        .rune:nth-child(3) { 
-            animation: runeChange3 7s ease-in-out infinite;
-            animation-delay: 2s;
-        }
-        .rune:nth-child(4) { 
-            animation: runeChange4 10s ease-in-out infinite;
-            animation-delay: 3s;
-        }
-        .rune:nth-child(5) { 
-            animation: runeChange5 8.5s ease-in-out infinite;
-            animation-delay: 4s;
-        }
-
-        @keyframes runeChange1 {
-            0% { opacity: 0.8; }
-            25% { opacity: 0.3; }
-            50% { opacity: 0.8; }
-            75% { opacity: 0.3; }
-            100% { opacity: 0.8; }
-        }
-
-        @keyframes runeChange2 {
-            0% { opacity: 0.8; }
-            20% { opacity: 0.3; }
-            40% { opacity: 0.8; }
-            60% { opacity: 0.3; }
-            80% { opacity: 0.8; }
-            100% { opacity: 0.8; }
-        }
-
-        @keyframes runeChange3 {
-            0% { opacity: 0.8; }
-            30% { opacity: 0.3; }
-            60% { opacity: 0.8; }
-            90% { opacity: 0.3; }
-            100% { opacity: 0.8; }
-        }
-
-        @keyframes runeChange4 {
-            0% { opacity: 0.8; }
-            25% { opacity: 0.3; }
-            50% { opacity: 0.8; }
-            75% { opacity: 0.3; }
-            100% { opacity: 0.8; }
-        }
-
-        @keyframes runeChange5 {
-            0% { opacity: 0.8; }
-            40% { opacity: 0.3; }
-            80% { opacity: 0.8; }
-            100% { opacity: 0.8; }
         }
 
         .hero .tagline {
@@ -570,11 +510,11 @@
             <div class="hero-content">
                 <h1 class="cosmic-title">COSMIC QUILL™</h1>
                 <div class="rolling-glyphs">
-                    <span class="rune" data-runes="ᚦᚢᚱᛋᚷᚨᛒᛖᛗᛚᛁᛜᛞᛟᚠᚢ">ᚦ</span>
-                    <span class="rune" data-runes="ᚱᚢᚦᚨᛋᚷᛒᛖᛗᛚᛁᛜᛞᛟᚠ">ᚱ</span>
-                    <span class="rune" data-runes="ᚢᚦᚱᛋᚷᚨᛒᛖᛗᛚᛁᛜᛞᛟ">ᚢ</span>
-                    <span class="rune" data-runes="ᚦᚨᛋᚷᚱᚢᛒᛖᛗᛚᛁᛜᛞ">ᚦ</span>
-                    <span class="rune" data-runes="ᛋᚷᚨᚦᚱᚢᛒᛖᛗᛚᛁᛜ">ᛋ</span>
+                    <span class="rune">ᚦ</span>
+                    <span class="rune">ᚱ</span>
+                    <span class="rune">ᚢ</span>
+                    <span class="rune">ᚦ</span>
+                    <span class="rune">ᛋ</span>
                 </div>
                 <p class="tagline">Ancient Truths. Modern Terror.</p>
                 <p class="description">Independent publisher crafting mythic fiction that explores memory, meaning, and the hidden layers of story.</p>
@@ -669,28 +609,34 @@
     </footer>
 
     <script>
-        // Rune changing functionality (like Bloodline Watchers)
+        // Rune changing functionality (exactly like Bloodline Watchers)
         function initRuneChanging() {
             const runes = document.querySelectorAll('.rune');
+            const runeOptions = [
+                ['ᚦ', 'ᚱ', 'ᚢ', 'ᚦ', 'ᛋ'],
+                ['ᚷ', 'ᚨ', 'ᛒ', 'ᛖ', 'ᛗ'],
+                ['ᛚ', 'ᛁ', 'ᛜ', 'ᛞ', 'ᛟ'],
+                ['ᚠ', 'ᚢ', 'ᚦ', 'ᚨ', 'ᚱ'],
+                ['ᚲ', 'ᚷ', 'ᚹ', 'ᚺ', 'ᚾ']
+            ];
             
             runes.forEach((rune, index) => {
-                const runeSet = rune.getAttribute('data-runes');
-                let currentIndex = 0;
+                let currentSet = 0;
                 
                 setInterval(() => {
                     // Fade out
-                    rune.style.opacity = '0.2';
+                    rune.style.opacity = '0.3';
                     
                     setTimeout(() => {
-                        // Change rune
-                        currentIndex = (currentIndex + 1) % runeSet.length;
-                        rune.textContent = runeSet[currentIndex];
+                        // Change to next rune set
+                        currentSet = (currentSet + 1) % runeOptions.length;
+                        rune.textContent = runeOptions[currentSet][index];
                         
                         // Fade back in
                         rune.style.opacity = '0.8';
-                    }, 250);
+                    }, 300);
                     
-                }, 3000 + (index * 500)); // Different timing for each rune
+                }, 2000 + (index * 400)); // Staggered timing like Bloodline Watchers
             });
         }
 
