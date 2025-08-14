@@ -470,7 +470,7 @@
                     
                     <p><strong>Status:</strong> Coming Winter 2025</p>
                     
-                    <a href="https://www.thebloodlinewatchers.com" class="cta-btn" target="_blank">Learn More</a>
+                    <a href="https://www.thebloodlinewatchers.com" class="cta-btn" target="_blank">Explore</a>
                 </div>
             </div>
         </div>
@@ -537,12 +537,31 @@
     </footer>
 
     <script>
-        // Handle form submission without 405 error
+        // Handle form submission without errors
         function handleFormSubmit(event) {
-            event.preventDefault();
-            const email = event.target.querySelector('input[type="email"]').value;
-            alert('Thank you for your interest! Email: ' + email + '\n\nNewsletter signup coming soon.');
-            event.target.reset();
+            event.preventDefault(); // Prevent form from actually submitting
+            const emailInput = event.target.querySelector('input[type="email"]');
+            const email = emailInput.value;
+            
+            // Simple validation
+            if (email && email.includes('@')) {
+                // Show success message
+                emailInput.style.borderColor = '#d4af37';
+                emailInput.value = '';
+                emailInput.placeholder = 'Thank you! We\'ll be in touch.';
+                
+                // Reset after 3 seconds
+                setTimeout(() => {
+                    emailInput.placeholder = 'Enter your email';
+                    emailInput.style.borderColor = '#d4af37';
+                }, 3000);
+            } else {
+                // Show error
+                emailInput.style.borderColor = '#ff4500';
+                emailInput.placeholder = 'Please enter a valid email';
+            }
+            
+            return false; // Ensure form doesn't submit
         }
 
         // Smooth scrolling for navigation links
