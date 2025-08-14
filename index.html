@@ -6,31 +6,12 @@
     <title>Cosmic Quill™ LLC - Ancient Truths, Modern Terror</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Cosmic Quill™ LLC is an independent publisher of mythic fiction and cosmic thrillers. Specializing in ancient wisdom disguised as modern narrative, where forgotten bloodlines and hidden truths emerge from shadow.">
-    <meta name="keywords" content="mythic fiction, cosmic horror, independent publisher, ancient wisdom, bloodline watchers, gnostic thrillers, esoteric fiction, cosmic quill">
+    <meta name="description" content="Cosmic Quill™ LLC is an independent publisher of mythic fiction and cosmic thrillers. Specializing in ancient wisdom disguised as modern narrative.">
+    <meta name="keywords" content="mythic fiction, cosmic horror, independent publisher, ancient wisdom, bloodline watchers">
     <meta name="author" content="Cosmic Quill LLC">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.cosmicquill.pub/">
-    <meta property="og:title" content="Cosmic Quill™ LLC - Ancient Truths, Modern Terror">
-    <meta property="og:description" content="Independent publisher of mythic fiction and cosmic thrillers. We forge narratives from forgotten bloodlines where memory bleeds into reality.">
-    <meta property="og:image" content="https://www.cosmicquill.pub/cosmic_quill_logo.png">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.cosmicquill.pub/">
-    <meta property="twitter:title" content="Cosmic Quill™ LLC - Ancient Truths, Modern Terror">
-    <meta property="twitter:description" content="Independent publisher of mythic fiction and cosmic thrillers. We forge narratives from forgotten bloodlines where memory bleeds into reality.">
-    <meta property="twitter:image" content="https://www.cosmicquill.pub/cosmic_quill_logo.png">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./cosmic_quill_logo.png">
-    <link rel="apple-touch-icon" href="./cosmic_quill_logo.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.cosmicquill.pub/">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap');
@@ -43,27 +24,24 @@
 
         :root {
             --void-black: #000000;
-            --deep-black: #0a0a0a;
-            --ghostly-silver: #c9c9c9;
-            --ethereal-gold: #d4af37;
+            --deep-black: #111111;
+            --soft-gold: #d4af37;
             --pale-gold: #f4e4bc;
-            --shadow-gray: #1a1a1a;
-            --spectral-blue: #4a5568;
-            --phantom-purple: #6b46c1;
-            --mist-gray: #2d2d2d;
-            --bone-white: #f8f8f2;
+            --ghost-gray: #888888;
+            --light-gray: #cccccc;
+            --accent-purple: #6b46c1;
+            --dark-gray: #222222;
         }
 
         body {
             font-family: 'Cormorant Garamond', serif;
             background: var(--void-black);
-            color: var(--ghostly-silver);
-            line-height: 1.4;
+            color: var(--light-gray);
+            line-height: 1.6;
             overflow-x: hidden;
-            position: relative;
         }
 
-        /* Haunting mist effect */
+        /* Subtle background effect */
         body::before {
             content: '';
             position: fixed;
@@ -71,46 +49,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(107, 70, 193, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 40% 60%, rgba(201, 201, 201, 0.02) 0%, transparent 50%);
+            background: radial-gradient(circle at 50% 50%, rgba(107, 70, 193, 0.02) 0%, transparent 60%);
             pointer-events: none;
             z-index: 1;
-        }
-
-        /* Floating spectral particles */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        .particle {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            background: var(--ethereal-gold);
-            opacity: 0.4;
-            animation: spectralFloat 20s infinite linear;
-            box-shadow: 0 0 3px var(--ethereal-gold);
-        }
-
-        @keyframes spectralFloat {
-            0% { 
-                transform: translateY(100vh) rotate(0deg) scale(0.5); 
-                opacity: 0; 
-            }
-            10% { opacity: 0.4; }
-            90% { opacity: 0.4; }
-            100% { 
-                transform: translateY(-10vh) rotate(360deg) scale(1); 
-                opacity: 0; 
-            }
         }
 
         .container {
@@ -126,11 +67,10 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: linear-gradient(180deg, var(--void-black) 0%, rgba(0, 0, 0, 0.95) 100%);
+            background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
         }
 
         .nav {
@@ -145,79 +85,45 @@
             align-items: center;
             gap: 15px;
             text-decoration: none;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
         }
 
         .logo-img {
-            width: 50px;
-            height: 50px;
-            filter: 
-                drop-shadow(0 0 15px rgba(212, 175, 55, 0.6))
-                brightness(1.1);
-            transition: all 0.4s ease;
+            width: 45px;
+            height: 45px;
+            transition: all 0.3s ease;
         }
 
         .logo-text {
             font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--ethereal-gold);
-            text-shadow: 
-                0 0 10px rgba(212, 175, 55, 0.5),
-                0 0 20px rgba(212, 175, 55, 0.3);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--soft-gold);
             letter-spacing: 1px;
-            transition: all 0.4s ease;
         }
 
         .logo:hover .logo-img {
-            filter: 
-                drop-shadow(0 0 25px rgba(212, 175, 55, 0.9))
-                brightness(1.3);
-            transform: scale(1.1) rotate(3deg);
-        }
-
-        .logo:hover .logo-text {
-            text-shadow: 
-                0 0 15px rgba(212, 175, 55, 0.8),
-                0 0 30px rgba(212, 175, 55, 0.5);
+            transform: scale(1.05);
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2.5rem;
+            gap: 2rem;
         }
 
         .nav-links a {
             font-family: 'Cinzel', serif;
-            color: var(--ghostly-silver);
+            color: var(--light-gray);
             text-decoration: none;
             font-size: 0.9rem;
             letter-spacing: 1px;
             text-transform: uppercase;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--phantom-purple);
-            transition: width 0.3s ease;
-            box-shadow: 0 0 5px var(--phantom-purple);
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: var(--pale-gold);
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
+            color: var(--soft-gold);
         }
 
         /* Hero Section */
@@ -226,189 +132,81 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            background: 
-                radial-gradient(circle at 50% 50%, rgba(107, 70, 193, 0.05) 0%, transparent 60%),
-                radial-gradient(circle at 30% 70%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
-        }
-
-        .hero-content {
             text-align: center;
-            position: relative;
-            z-index: 10;
         }
 
         .hero-logo {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             margin: 0 auto 2rem;
-            filter: 
-                drop-shadow(0 0 40px rgba(212, 175, 55, 0.7))
-                brightness(1.2);
-            animation: heroLogoGlow 6s ease-in-out infinite alternate;
+            transition: all 0.3s ease;
         }
 
-        @keyframes heroLogoGlow {
-            from { 
-                filter: 
-                    drop-shadow(0 0 40px rgba(212, 175, 55, 0.7))
-                    brightness(1.2);
-                transform: rotate(0deg) scale(1);
-            }
-            to { 
-                filter: 
-                    drop-shadow(0 0 60px rgba(212, 175, 55, 0.9))
-                    drop-shadow(0 0 80px rgba(107, 70, 193, 0.3))
-                    brightness(1.4);
-                transform: rotate(1deg) scale(1.02);
-            }
+        .hero-logo:hover {
+            transform: scale(1.02);
         }
 
         .hero h1 {
             font-family: 'Cinzel', serif;
-            font-size: 4.5rem;
+            font-size: 4rem;
             font-weight: 700;
-            color: var(--ethereal-gold);
+            color: var(--soft-gold);
             margin-bottom: 1rem;
-            text-shadow: 
-                2px 2px 10px rgba(0, 0, 0, 0.8),
-                0 0 30px rgba(212, 175, 55, 0.4),
-                0 0 50px rgba(212, 175, 55, 0.2);
             letter-spacing: 2px;
-            animation: titleGlow 5s ease-in-out infinite alternate;
-        }
-
-        @keyframes titleGlow {
-            from { 
-                text-shadow: 
-                    2px 2px 10px rgba(0, 0, 0, 0.8),
-                    0 0 30px rgba(212, 175, 55, 0.4),
-                    0 0 50px rgba(212, 175, 55, 0.2);
-            }
-            to { 
-                text-shadow: 
-                    2px 2px 10px rgba(0, 0, 0, 0.8),
-                    0 0 40px rgba(212, 175, 55, 0.6),
-                    0 0 70px rgba(212, 175, 55, 0.3),
-                    0 0 100px rgba(107, 70, 193, 0.2);
-            }
         }
 
         .hero .tagline {
-            font-size: 1.5rem;
-            color: var(--spectral-blue);
+            font-size: 1.4rem;
+            color: var(--ghost-gray);
             margin-bottom: 3rem;
             font-style: italic;
             letter-spacing: 1px;
-            text-shadow: 0 0 10px rgba(74, 85, 104, 0.6);
         }
 
         .hero .description {
             font-size: 1.2rem;
             max-width: 700px;
             margin: 0 auto 3rem;
-            color: var(--ghostly-silver);
-            opacity: 0.9;
+            color: var(--light-gray);
             line-height: 1.6;
         }
 
-        /* Ghostly runes */
-        .runes {
-            font-size: 2rem;
-            color: var(--phantom-purple);
-            margin: 2rem 0;
-            letter-spacing: 1rem;
-            opacity: 0.8;
-            animation: runeGlow 6s ease-in-out infinite alternate;
-            text-shadow: 0 0 15px rgba(107, 70, 193, 0.6);
-        }
-
-        @keyframes runeGlow {
-            from { 
-                opacity: 0.6; 
-                text-shadow: 0 0 15px rgba(107, 70, 193, 0.6);
-            }
-            to { 
-                opacity: 1; 
-                text-shadow: 
-                    0 0 25px rgba(107, 70, 193, 0.8),
-                    0 0 40px rgba(107, 70, 193, 0.4);
-            }
-        }
-
-        /* Ethereal button styling */
-        .ancient-btn {
+        /* Simple button */
+        .cta-btn {
             display: inline-block;
-            background: linear-gradient(45deg, 
-                rgba(107, 70, 193, 0.8), 
-                rgba(74, 85, 104, 0.6));
-            color: var(--pale-gold);
-            padding: 18px 35px;
-            border: 2px solid var(--ethereal-gold);
+            background: transparent;
+            color: var(--soft-gold);
+            padding: 15px 30px;
+            border: 2px solid var(--soft-gold);
             font-family: 'Cinzel', serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 
-                0 0 20px rgba(107, 70, 193, 0.4),
-                inset 0 0 20px rgba(212, 175, 55, 0.1);
+            transition: all 0.3s ease;
         }
 
-        .ancient-btn::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, 
-                transparent, 
-                rgba(212, 175, 55, 0.2), 
-                transparent);
-            transform: rotate(45deg);
-            transition: all 0.6s ease;
-            opacity: 0;
-        }
-
-        .ancient-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 
-                0 5px 25px rgba(107, 70, 193, 0.6),
-                inset 0 0 30px rgba(212, 175, 55, 0.2);
-            border-color: var(--pale-gold);
-            color: var(--bone-white);
-        }
-
-        .ancient-btn:hover::before {
-            opacity: 1;
-            left: -10%;
-            top: -10%;
+        .cta-btn:hover {
+            background: var(--soft-gold);
+            color: var(--void-black);
         }
 
         /* Sections */
         .section {
-            padding: 100px 0;
-            position: relative;
-            border-top: 1px solid rgba(107, 70, 193, 0.2);
+            padding: 80px 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
         }
 
         .section h2 {
             font-family: 'Cinzel', serif;
-            font-size: 3rem;
-            color: var(--ethereal-gold);
+            font-size: 2.5rem;
+            color: var(--soft-gold);
             text-align: center;
             margin-bottom: 3rem;
-            text-shadow: 
-                0 0 20px rgba(212, 175, 55, 0.4),
-                0 0 40px rgba(212, 175, 55, 0.2);
         }
 
-        /* Featured work */
+        /* Featured work - much cleaner */
         .featured-work {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -421,106 +219,47 @@
             text-align: center;
         }
 
-        .bloodline-portal {
-            width: 350px;
-            height: 500px;
-            background: linear-gradient(145deg, 
-                var(--shadow-gray), 
-                var(--mist-gray));
-            border: 3px solid var(--phantom-purple);
-            border-radius: 5px;
+        .book-portal {
+            width: 300px;
+            height: 400px;
+            background: var(--deep-black);
+            border: 2px solid var(--soft-gold);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-            position: relative;
-            box-shadow: 
-                0 0 40px rgba(107, 70, 193, 0.4),
-                inset 0 0 30px rgba(0, 0, 0, 0.5);
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
             cursor: pointer;
         }
 
-        .bloodline-portal:hover {
-            transform: scale(1.03);
-            box-shadow: 
-                0 0 60px rgba(107, 70, 193, 0.6),
-                0 0 80px rgba(212, 175, 55, 0.2),
-                inset 0 0 30px rgba(0, 0, 0, 0.5);
-            border-color: var(--ethereal-gold);
+        .book-portal:hover {
+            transform: translateY(-5px);
+            border-color: var(--pale-gold);
         }
 
-        .bloodline-portal h3 {
+        .book-portal h3 {
             font-family: 'Cinzel', serif;
-            color: var(--ethereal-gold);
-            font-size: 1.8rem;
+            color: var(--soft-gold);
+            font-size: 1.6rem;
             text-align: center;
-            margin-bottom: 2rem;
-            text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
-        }
-
-        .portal-runes {
-            font-size: 1.5rem;
-            color: var(--phantom-purple);
-            margin: 1rem 0;
-            letter-spacing: 0.5rem;
-            text-shadow: 0 0 10px rgba(107, 70, 193, 0.6);
+            margin-bottom: 1rem;
         }
 
         .work-details h3 {
             font-family: 'Cinzel', serif;
-            font-size: 2.2rem;
-            color: var(--spectral-blue);
+            font-size: 2rem;
+            color: var(--soft-gold);
             margin-bottom: 1.5rem;
-            text-shadow: 0 0 10px rgba(74, 85, 104, 0.6);
         }
 
         .work-details p {
             margin-bottom: 1.5rem;
-            color: var(--ghostly-silver);
-            font-size: 1.2rem;
-            opacity: 0.9;
+            color: var(--light-gray);
+            font-size: 1.1rem;
         }
 
-        /* Mystical geometric patterns */
-        .mystical-border {
-            position: relative;
-            padding: 3rem;
-            border: 2px solid var(--phantom-purple);
-            background: 
-                radial-gradient(circle at center, rgba(107, 70, 193, 0.08) 0%, transparent 70%);
-            box-shadow: 
-                0 0 30px rgba(107, 70, 193, 0.3),
-                inset 0 0 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .mystical-border::before,
-        .mystical-border::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--ethereal-gold);
-        }
-
-        .mystical-border::before {
-            top: -10px;
-            left: -10px;
-            border-right: none;
-            border-bottom: none;
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-        }
-
-        .mystical-border::after {
-            bottom: -10px;
-            right: -10px;
-            border-left: none;
-            border-top: none;
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-        }
-
-        /* Archive section */
+        /* Simple cards */
         .archive-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -529,243 +268,120 @@
         }
 
         .archive-item {
-            background: linear-gradient(145deg, 
-                var(--shadow-gray), 
-                var(--mist-gray));
-            border: 1px solid var(--phantom-purple);
+            background: var(--deep-black);
+            border: 1px solid rgba(212, 175, 55, 0.3);
             padding: 2rem;
             text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 
-                0 0 20px rgba(107, 70, 193, 0.2),
-                inset 0 0 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .archive-item::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(107, 70, 193, 0.1) 0%, transparent 70%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .archive-item::after {
-            content: '✦';
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            color: var(--ethereal-gold);
-            font-size: 1.2rem;
-            opacity: 0.5;
-            transition: all 0.4s ease;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
-        }
-
-        .archive-item:hover::before {
-            opacity: 1;
-        }
-
-        .archive-item:hover::after {
-            opacity: 1;
-            transform: rotate(45deg) scale(1.2);
-            text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+            transition: all 0.3s ease;
         }
 
         .archive-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 
-                0 10px 40px rgba(107, 70, 193, 0.4),
-                inset 0 0 30px rgba(0, 0, 0, 0.3);
-            border-color: var(--ethereal-gold);
+            border-color: var(--soft-gold);
+            transform: translateY(-2px);
         }
 
         .archive-item h4 {
             font-family: 'Cinzel', serif;
-            color: var(--ethereal-gold);
+            color: var(--soft-gold);
             margin-bottom: 1rem;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+            font-size: 1.2rem;
         }
 
-        /* Initiation (Newsletter) */
-        .initiation h3 {
+        .archive-item p {
+            color: var(--light-gray);
+        }
+
+        /* Newsletter - much simpler */
+        .newsletter {
+            background: var(--deep-black);
+            border: 2px solid var(--soft-gold);
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .newsletter h3 {
             font-family: 'Cinzel', serif;
-            color: var(--ethereal-gold);
-            font-size: 2.5rem;
+            color: var(--soft-gold);
+            font-size: 2rem;
             margin-bottom: 1rem;
-            text-shadow: 
-                0 0 20px rgba(212, 175, 55, 0.4),
-                0 0 40px rgba(212, 175, 55, 0.2);
         }
 
-        .ritual-form {
+        .email-form {
             display: flex;
             gap: 1rem;
-            max-width: 500px;
+            max-width: 400px;
             margin: 2rem auto 0;
         }
 
-        .ritual-form input {
+        .email-form input {
             flex: 1;
-            padding: 15px 20px;
-            background: var(--shadow-gray);
-            border: 2px solid var(--phantom-purple);
-            color: var(--ghostly-silver);
+            padding: 12px 15px;
+            background: var(--void-black);
+            border: 1px solid var(--soft-gold);
+            color: var(--light-gray);
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.1rem;
-            border-radius: 0;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+            font-size: 1rem;
         }
 
-        .ritual-form input::placeholder {
-            color: rgba(201, 201, 201, 0.5);
+        .email-form input::placeholder {
+            color: var(--ghost-gray);
         }
 
-        .ritual-form input:focus {
-            outline: none;
-            border-color: var(--ethereal-gold);
-            box-shadow: 
-                inset 0 0 10px rgba(0, 0, 0, 0.5),
-                0 0 15px rgba(212, 175, 55, 0.4);
-        }
-
-        .ritual-form button {
-            padding: 15px 25px;
-            background: linear-gradient(45deg, 
-                rgba(107, 70, 193, 0.8), 
-                rgba(74, 85, 104, 0.6));
-            color: var(--pale-gold);
-            border: 2px solid var(--ethereal-gold);
+        .email-form button {
+            padding: 12px 20px;
+            background: var(--soft-gold);
+            color: var(--void-black);
+            border: none;
             font-family: 'Cinzel', serif;
             font-weight: 600;
             text-transform: uppercase;
             cursor: pointer;
-            transition: all 0.4s ease;
-            border-radius: 0;
-            box-shadow: 0 0 15px rgba(107, 70, 193, 0.4);
+            transition: all 0.3s ease;
         }
 
-        .ritual-form button:hover {
-            background: linear-gradient(45deg, 
-                rgba(74, 85, 104, 0.8), 
-                rgba(107, 70, 193, 0.6));
-            box-shadow: 0 0 25px rgba(107, 70, 193, 0.6);
-            color: var(--bone-white);
+        .email-form button:hover {
+            background: var(--pale-gold);
         }
 
         /* Footer */
         .footer {
-            background: linear-gradient(180deg, var(--void-black) 0%, var(--shadow-gray) 100%);
-            border-top: 2px solid var(--phantom-purple);
-            padding: 4rem 0 2rem;
-            position: relative;
-            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .footer::before {
-            content: 'ᚷᛞᛁᚨᚾ ᛟᚨᚦ';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--shadow-gray);
-            padding: 0 2rem;
-            color: var(--phantom-purple);
-            font-size: 1.5rem;
-            text-shadow: 0 0 10px rgba(107, 70, 193, 0.6);
+            background: var(--deep-black);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 3rem 0 2rem;
+            text-align: center;
         }
 
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
+            gap: 2rem;
             margin-bottom: 2rem;
         }
 
         .footer-section h4 {
             font-family: 'Cinzel', serif;
-            color: var(--ethereal-gold);
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+            color: var(--soft-gold);
+            margin-bottom: 1rem;
         }
 
         .footer-section p,
         .footer-section a {
-            color: var(--ghostly-silver);
+            color: var(--light-gray);
             text-decoration: none;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.5rem;
             display: block;
-            opacity: 0.8;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease;
         }
 
         .footer-section a:hover {
-            color: var(--pale-gold);
-            opacity: 1;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            color: var(--soft-gold);
         }
 
         .copyright {
-            border-top: 1px solid var(--phantom-purple);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
             padding-top: 2rem;
-            text-align: center;
-            color: var(--ghostly-silver);
-            opacity: 0.6;
-        }
-
-        /* Floating cosmic elements */
-        .cosmic-elements {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 3;
-        }
-
-        .cosmic-element {
-            position: absolute;
-            color: var(--ethereal-gold);
-            opacity: 0.3;
-            font-size: 1.5rem;
-            animation: cosmicFloat 25s infinite linear;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
-        }
-
-        @keyframes cosmicFloat {
-            0% { 
-                transform: translateY(100vh) rotate(0deg) scale(0.5);
-                opacity: 0;
-            }
-            10% { opacity: 0.3; }
-            90% { opacity: 0.3; }
-            100% { 
-                transform: translateY(-10vh) rotate(360deg) scale(1);
-                opacity: 0;
-            }
-        }
-
-        /* Hidden ancient text */
-        .ancient-text {
-            position: fixed;
-            top: 50%;
-            right: -200px;
-            transform: translateY(-50%) rotate(90deg);
-            color: var(--phantom-purple);
-            font-size: 1rem;
-            opacity: 0.3;
-            z-index: 5;
-            transition: all 0.3s ease;
-            font-family: 'Cinzel', serif;
-            letter-spacing: 2px;
-            text-shadow: 0 0 10px rgba(107, 70, 193, 0.6);
+            color: var(--ghost-gray);
         }
 
         /* Mobile responsive */
@@ -775,7 +391,7 @@
             }
 
             .hero h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
 
             .featured-work {
@@ -783,26 +399,13 @@
                 text-align: center;
             }
 
-            .ritual-form {
+            .email-form {
                 flex-direction: column;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Floating cosmic elements -->
-    <div class="cosmic-elements" id="cosmic-elements"></div>
-    
-    <!-- Floating particles -->
-    <div class="particles" id="particles"></div>
-    
-    <!-- Hidden ancient text -->
-    <div class="ancient-text">ᚨᚾᚲᛁᛖᚾᛏ ᚹᛁᛋᛞᚮᛗ ᚨᚹᚨᛁᛏᛋ</div>
-
     <!-- Header -->
     <header class="header">
         <nav class="container">
@@ -812,11 +415,11 @@
                     <span class="logo-text">COSMIC QUILL™</span>
                 </a>
                 <ul class="nav-links">
-                    <li><a href="#home">The Void</a></li>
-                    <li><a href="#featured">The Work</a></li>
-                    <li><a href="#archive">The Archive</a></li>
-                    <li><a href="#initiation">Initiation</a></li>
-                    <li><a href="#contact">The Scribe</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#featured">The Book</a></li>
+                    <li><a href="#archive">Archive</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -829,23 +432,32 @@
                 <img src="./cosmic_quill_logo.png" class="hero-logo" alt="Cosmic Quill Logo">
                 <h1>COSMIC QUILL™</h1>
                 <p class="tagline">Ancient Truths. Modern Terror.</p>
-                <div class="bloodline-portal" onclick="window.open('https://www.thebloodlinewatchers.com', '_blank')">
+                <p class="description">Independent publisher crafting mythic fiction that explores memory, meaning, and the hidden layers of story.</p>
+                <a href="#featured" class="cta-btn">Discover Our Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section id="featured" class="section">
+        <div class="container">
+            <h2>Featured Release</h2>
+            <div class="featured-work">
+                <div class="book-showcase">
+                    <div class="book-portal" onclick="window.open('https://www.thebloodlinewatchers.com', '_blank')">
                         <h3>The Bloodline<br>Watchers</h3>
-                        <div class="portal-runes">ᛏᚺᛖ ᛋᛁᚷ</div>
-                        <p style="color: var(--ghostly-silver); opacity: 0.7; margin-top: 1rem;">Enter the Portal</p>
+                        <p style="color: var(--ghost-gray); margin-top: 1rem;">Coming Winter 2025</p>
                     </div>
                 </div>
                 <div class="work-details">
                     <h3>The Bloodline Watchers</h3>
                     <p>A cosmic thriller rooted in ancient truth. When forgotten bloodlines awaken and the watchers emerge from shadow, reality itself begins to unravel.</p>
                     
-                    <p>This is not fiction. This is revelation disguised as story—a key to unlock the hidden mythologies that have shaped human consciousness for millennia.</p>
+                    <p>This inaugural release explores themes of inherited responsibility, the weight of forgotten histories, and the courage required to break cycles that have bound families for generations.</p>
                     
-                    <div class="runes" style="font-size: 1.2rem; margin: 2rem 0;">ᚲᚮᛗᛁᚾᚷ ᚹᛁᚾᛏᛖᚱ ᛗᛗᚲᛋᚲᚡ</div>
+                    <p><strong>Status:</strong> Coming Winter 2025</p>
                     
-                    <p><strong>Status:</strong> The seal weakens. Winter 2025.</p>
-                    
-                    <a href="https://www.thebloodlinewatchers.com" class="ancient-btn" target="_blank">Enter the Glyphs</a>
+                    <a href="https://www.thebloodlinewatchers.com" class="cta-btn" target="_blank">Learn More</a>
                 </div>
             </div>
         </div>
@@ -854,36 +466,33 @@
     <!-- Archive Section -->
     <section id="archive" class="section">
         <div class="container">
-            <h2>The Archive</h2>
+            <h2>Our Focus</h2>
             <div class="archive-grid">
                 <div class="archive-item">
-                    <h4>Mythic Codex</h4>
-                    <p>Ancient wisdom disguised as modern fiction. Each work a key to unlock hidden truths.</p>
-                    <div class="runes">ᚨᚱᚲᚨᚾᛖ</div>
+                    <h4>Mythic Fiction</h4>
+                    <p>Stories that bridge ancient wisdom and modern experience, revealing timeless truths through contemporary narrative.</p>
                 </div>
                 <div class="archive-item">
-                    <h4>Gnostic Thrillers</h4>
-                    <p>Where cosmic horror meets forgotten history. The terror of remembering what we were meant to forget.</p>
-                    <div class="runes">ᚷᚾᚮᛋᛁᛋ</div>
+                    <h4>Cosmic Thrillers</h4>
+                    <p>Where psychological suspense meets cosmic horror, exploring the terror of discovering what lies beyond human understanding.</p>
                 </div>
                 <div class="archive-item">
-                    <h4>Bloodline Chronicles</h4>
-                    <p>The watchers have always been among us. Their stories demand to be told.</p>
-                    <div class="runes">ᚹᚨᛏᚲᚺᛖᚱᛋ</div>
+                    <h4>Hidden Histories</h4>
+                    <p>Narratives that uncover the forgotten bloodlines and secret knowledge that have shaped our world from the shadows.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Initiation Section -->
-    <section id="initiation" class="section">
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section">
         <div class="container">
-            <div class="initiation mystical-border">
-                <h3>The Initiation</h3>
-                <p>Join the circle of those who remember. Receive the transmissions as they emerge from shadow.</p>
-                <form class="ritual-form" action="#" method="post">
-                    <input type="email" placeholder="Your vessel for the truth..." required>
-                    <button type="submit">Begin</button>
+            <div class="newsletter">
+                <h3>Stay Connected</h3>
+                <p>Be the first to know about new releases and behind-the-scenes insights.</p>
+                <form class="email-form" action="#" method="post">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
                 </form>
             </div>
         </div>
@@ -894,59 +503,27 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Contact the Scribe</h4>
+                    <h4>Contact</h4>
                     <a href="mailto:info@cosmicquill.pub">info@cosmicquill.pub</a>
                     <a href="mailto:contact@cosmicquill.pub">contact@cosmicquill.pub</a>
-                    <a href="mailto:trademarks@cosmicquill.pub">trademarks@cosmicquill.pub</a>
                 </div>
                 <div class="footer-section">
-                    <h4>The Order</h4>
+                    <h4>About</h4>
                     <p>Independent publisher of mythic fiction and cosmic thrillers.</p>
-                    <p>Revealing ancient truths through modern narrative.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>The Seal</h4>
+                    <h4>Company</h4>
                     <p>Cosmic Quill™ LLC<br>
-                    Est. in the age of forgetting<br>
-                    Purveyors of forbidden knowledge</p>
+                    Independent Publisher</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 Cosmic Quill™ LLC. The watchers see all.</p>
+                <p>&copy; 2024 Cosmic Quill™ LLC. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Create floating cosmic elements
-        function createCosmicElements() {
-            const cosmicContainer = document.getElementById('cosmic-elements');
-            const symbols = ['✦', '⟡', '◊', '※', '⊹', '✧', '⟢', '◈'];
-            
-            for (let i = 0; i < 15; i++) {
-                const element = document.createElement('div');
-                element.className = 'cosmic-element';
-                element.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-                element.style.left = Math.random() * 100 + '%';
-                element.style.animationDelay = Math.random() * 25 + 's';
-                element.style.animationDuration = (Math.random() * 15 + 20) + 's';
-                cosmicContainer.appendChild(element);
-            }
-        }
-
-        // Create floating particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            for (let i = 0; i < 60; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (Math.random() * 15 + 15) + 's';
-                particlesContainer.appendChild(particle);
-            }
-        }
-
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -960,37 +537,6 @@
                 }
             });
         });
-
-        // Initialize effects when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            createParticles();
-            createCosmicElements();
-        });
-
-        // Add mystical hover effects to runes
-        document.querySelectorAll('.runes').forEach(rune => {
-            rune.addEventListener('mouseenter', function() {
-                this.style.textShadow = '0 0 30px rgba(107, 70, 193, 0.9), 0 0 50px rgba(107, 70, 193, 0.5)';
-                this.style.transform = 'scale(1.1)';
-            });
-            rune.addEventListener('mouseleave', function() {
-                this.style.textShadow = '0 0 15px rgba(107, 70, 193, 0.6)';
-                this.style.transform = 'scale(1)';
-            });
-        });
     </script>
 </body>
-</html>="runes">ᚨᚱᚲᚨᚾᛖ ᚷᚾᚮᛋᛁᛋ ᚨᚹᚨᛁᛏᛋ</div>
-                <p class="description">We forge narratives from the forgotten bloodlines of power, where memory bleeds into reality and the watchers in the shadows finally speak their truths.</p>
-                <a href="#featured" class="ancient-btn">Enter the Mysteries</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Work Section -->
-    <section id="featured" class="section">
-        <div class="container">
-            <h2>The First Revelation</h2>
-            <div class="featured-work">
-                <div class="book-showcase">
-                    <div class
+</html>
