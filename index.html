@@ -135,7 +135,7 @@
             text-align: center;
         }
 
-        /* Professional glow with white backlight */
+        /* Sharp, mysterious glow - not fuzzy */
         .cosmic-title {
             font-family: 'Cinzel', serif;
             font-size: 5rem;
@@ -147,47 +147,43 @@
             text-transform: uppercase;
             background: rgba(0, 0, 0, 0.2);
             padding: 2rem 0;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
             text-shadow: 
-                0 0 5px rgba(255, 255, 255, 0.8),
-                0 0 10px rgba(255, 255, 255, 0.6),
-                0 0 15px rgba(212, 175, 55, 0.4),
-                0 0 20px rgba(212, 175, 55, 0.2);
-            animation: whiteGlow 4s ease-in-out infinite alternate;
+                0 0 2px rgba(255, 255, 255, 0.9),
+                0 0 4px rgba(255, 255, 255, 0.7),
+                0 0 6px rgba(212, 175, 55, 0.5);
+            animation: sharpGlow 5s ease-in-out infinite alternate;
             transition: all 0.3s ease;
             position: relative;
         }
 
-        @keyframes whiteGlow {
+        @keyframes sharpGlow {
             from {
                 text-shadow: 
-                    0 0 5px rgba(255, 255, 255, 0.8),
-                    0 0 10px rgba(255, 255, 255, 0.6),
-                    0 0 15px rgba(212, 175, 55, 0.4),
-                    0 0 20px rgba(212, 175, 55, 0.2);
-                border-color: rgba(212, 175, 55, 0.2);
+                    0 0 2px rgba(255, 255, 255, 0.9),
+                    0 0 4px rgba(255, 255, 255, 0.7),
+                    0 0 6px rgba(212, 175, 55, 0.5);
+                border-color: rgba(212, 175, 55, 0.3);
             }
             to {
                 text-shadow: 
-                    0 0 8px rgba(255, 255, 255, 1),
-                    0 0 16px rgba(255, 255, 255, 0.8),
-                    0 0 24px rgba(212, 175, 55, 0.6),
-                    0 0 32px rgba(212, 175, 55, 0.4);
-                border-color: rgba(212, 175, 55, 0.4);
+                    0 0 3px rgba(255, 255, 255, 1),
+                    0 0 6px rgba(255, 255, 255, 0.8),
+                    0 0 9px rgba(212, 175, 55, 0.7);
+                border-color: rgba(212, 175, 55, 0.5);
             }
         }
 
         .cosmic-title:hover {
             text-shadow: 
-                0 0 10px rgba(255, 255, 255, 1),
-                0 0 20px rgba(255, 255, 255, 0.9),
-                0 0 30px rgba(212, 175, 55, 0.8),
-                0 0 40px rgba(212, 175, 55, 0.5);
-            border-color: rgba(212, 175, 55, 0.6);
+                0 0 4px rgba(255, 255, 255, 1),
+                0 0 8px rgba(255, 255, 255, 0.9),
+                0 0 12px rgba(212, 175, 55, 0.8);
+            border-color: rgba(212, 175, 55, 0.7);
         }
 
-        /* Rotating runes that change */
+        /* Runes that change to different runes (like Bloodline Watchers) */
         .rolling-glyphs {
             font-size: 1.8rem;
             color: var(--soft-gold);
@@ -203,43 +199,69 @@
 
         .rune {
             display: inline-block;
-            animation: runeRotate 6s ease-in-out infinite;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-            transition: all 0.3s ease;
+            text-shadow: 0 0 3px rgba(212, 175, 55, 0.6);
+            transition: all 0.5s ease;
+            position: relative;
         }
 
-        .rune:nth-child(1) { animation-delay: 0s; }
-        .rune:nth-child(2) { animation-delay: 1s; }
-        .rune:nth-child(3) { animation-delay: 2s; }
-        .rune:nth-child(4) { animation-delay: 3s; }
-        .rune:nth-child(5) { animation-delay: 4s; }
+        .rune:nth-child(1) { 
+            animation: runeChange1 8s ease-in-out infinite;
+        }
+        .rune:nth-child(2) { 
+            animation: runeChange2 9s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+        .rune:nth-child(3) { 
+            animation: runeChange3 7s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+        .rune:nth-child(4) { 
+            animation: runeChange4 10s ease-in-out infinite;
+            animation-delay: 3s;
+        }
+        .rune:nth-child(5) { 
+            animation: runeChange5 8.5s ease-in-out infinite;
+            animation-delay: 4s;
+        }
 
-        @keyframes runeRotate {
-            0% { 
-                opacity: 0.6; 
-                transform: scale(1) rotate(0deg);
-                text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
-            }
-            25% { 
-                opacity: 1; 
-                transform: scale(1.2) rotate(90deg);
-                text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
-            }
-            50% { 
-                opacity: 0.8; 
-                transform: scale(1) rotate(180deg);
-                text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-            }
-            75% { 
-                opacity: 1; 
-                transform: scale(1.1) rotate(270deg);
-                text-shadow: 0 0 12px rgba(212, 175, 55, 0.7);
-            }
-            100% { 
-                opacity: 0.6; 
-                transform: scale(1) rotate(360deg);
-                text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
-            }
+        @keyframes runeChange1 {
+            0% { opacity: 0.8; }
+            25% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+            75% { opacity: 0.3; }
+            100% { opacity: 0.8; }
+        }
+
+        @keyframes runeChange2 {
+            0% { opacity: 0.8; }
+            20% { opacity: 0.3; }
+            40% { opacity: 0.8; }
+            60% { opacity: 0.3; }
+            80% { opacity: 0.8; }
+            100% { opacity: 0.8; }
+        }
+
+        @keyframes runeChange3 {
+            0% { opacity: 0.8; }
+            30% { opacity: 0.3; }
+            60% { opacity: 0.8; }
+            90% { opacity: 0.3; }
+            100% { opacity: 0.8; }
+        }
+
+        @keyframes runeChange4 {
+            0% { opacity: 0.8; }
+            25% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+            75% { opacity: 0.3; }
+            100% { opacity: 0.8; }
+        }
+
+        @keyframes runeChange5 {
+            0% { opacity: 0.8; }
+            40% { opacity: 0.3; }
+            80% { opacity: 0.8; }
+            100% { opacity: 0.8; }
         }
 
         .hero .tagline {
@@ -548,11 +570,11 @@
             <div class="hero-content">
                 <h1 class="cosmic-title">COSMIC QUILL™</h1>
                 <div class="rolling-glyphs">
-                    <span class="rune">ᚦ</span>
-                    <span class="rune">ᚱ</span>
-                    <span class="rune">ᚢ</span>
-                    <span class="rune">ᚦ</span>
-                    <span class="rune">ᛋ</span>
+                    <span class="rune" data-runes="ᚦᚢᚱᛋᚷᚨᛒᛖᛗᛚᛁᛜᛞᛟᚠᚢ">ᚦ</span>
+                    <span class="rune" data-runes="ᚱᚢᚦᚨᛋᚷᛒᛖᛗᛚᛁᛜᛞᛟᚠ">ᚱ</span>
+                    <span class="rune" data-runes="ᚢᚦᚱᛋᚷᚨᛒᛖᛗᛚᛁᛜᛞᛟ">ᚢ</span>
+                    <span class="rune" data-runes="ᚦᚨᛋᚷᚱᚢᛒᛖᛗᛚᛁᛜᛞ">ᚦ</span>
+                    <span class="rune" data-runes="ᛋᚷᚨᚦᚱᚢᛒᛖᛗᛚᛁᛜ">ᛋ</span>
                 </div>
                 <p class="tagline">Ancient Truths. Modern Terror.</p>
                 <p class="description">Independent publisher crafting mythic fiction that explores memory, meaning, and the hidden layers of story.</p>
@@ -647,6 +669,31 @@
     </footer>
 
     <script>
+        // Rune changing functionality (like Bloodline Watchers)
+        function initRuneChanging() {
+            const runes = document.querySelectorAll('.rune');
+            
+            runes.forEach((rune, index) => {
+                const runeSet = rune.getAttribute('data-runes');
+                let currentIndex = 0;
+                
+                setInterval(() => {
+                    // Fade out
+                    rune.style.opacity = '0.2';
+                    
+                    setTimeout(() => {
+                        // Change rune
+                        currentIndex = (currentIndex + 1) % runeSet.length;
+                        rune.textContent = runeSet[currentIndex];
+                        
+                        // Fade back in
+                        rune.style.opacity = '0.8';
+                    }, 250);
+                    
+                }, 3000 + (index * 500)); // Different timing for each rune
+            });
+        }
+
         // Handle form submission without errors
         function handleFormSubmit(event) {
             event.preventDefault(); // Prevent form from actually submitting
@@ -673,6 +720,11 @@
             
             return false; // Ensure form doesn't submit
         }
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initRuneChanging();
+        });
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
