@@ -429,8 +429,21 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <img src="./cosmic_quill_logo.png" class="hero-logo" alt="Cosmic Quill Logo">
-                <h1>COSMIC QUILL™</h1>
+                <div class="cosmic-logo-text">
+                    <div class="letter">C</div>
+                    <div class="letter">O</div>
+                    <div class="letter">S</div>
+                    <div class="letter">M</div>
+                    <div class="letter">I</div>
+                    <div class="letter">C</div>
+                    <div class="spacer"></div>
+                    <div class="letter">Q</div>
+                    <div class="letter">U</div>
+                    <div class="letter">I</div>
+                    <div class="letter">L</div>
+                    <div class="letter">L</div>
+                    <div class="tm">™</div>
+                </div>
                 <p class="tagline">Ancient Truths. Modern Terror.</p>
                 <p class="description">Independent publisher crafting mythic fiction that explores memory, meaning, and the hidden layers of story.</p>
                 <a href="#featured" class="cta-btn">Discover Our Work</a>
@@ -490,7 +503,7 @@
             <div class="newsletter">
                 <h3>Stay Connected</h3>
                 <p>Be the first to know about new releases and behind-the-scenes insights.</p>
-                <form class="email-form" action="#" method="post">
+                <form class="email-form" action="#" method="post" onsubmit="handleFormSubmit(event)">
                     <input type="email" placeholder="Enter your email" required>
                     <button type="submit">Subscribe</button>
                 </form>
@@ -524,6 +537,14 @@
     </footer>
 
     <script>
+        // Handle form submission without 405 error
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            alert('Thank you for your interest! Email: ' + email + '\n\nNewsletter signup coming soon.');
+            event.target.reset();
+        }
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
