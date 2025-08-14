@@ -135,7 +135,7 @@
             text-align: center;
         }
 
-        /* Subtle professional glow */
+        /* Professional glow with white backlight */
         .cosmic-title {
             font-family: 'Cinzel', serif;
             font-size: 5rem;
@@ -150,56 +150,95 @@
             border-top: 1px solid rgba(212, 175, 55, 0.2);
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             text-shadow: 
-                0 0 10px rgba(212, 175, 55, 0.4),
+                0 0 5px rgba(255, 255, 255, 0.8),
+                0 0 10px rgba(255, 255, 255, 0.6),
+                0 0 15px rgba(212, 175, 55, 0.4),
                 0 0 20px rgba(212, 175, 55, 0.2);
-            animation: subtleGlow 4s ease-in-out infinite alternate;
+            animation: whiteGlow 4s ease-in-out infinite alternate;
             transition: all 0.3s ease;
             position: relative;
         }
 
-        @keyframes subtleGlow {
+        @keyframes whiteGlow {
             from {
                 text-shadow: 
-                    0 0 10px rgba(212, 175, 55, 0.4),
+                    0 0 5px rgba(255, 255, 255, 0.8),
+                    0 0 10px rgba(255, 255, 255, 0.6),
+                    0 0 15px rgba(212, 175, 55, 0.4),
                     0 0 20px rgba(212, 175, 55, 0.2);
                 border-color: rgba(212, 175, 55, 0.2);
             }
             to {
                 text-shadow: 
-                    0 0 15px rgba(212, 175, 55, 0.6),
-                    0 0 30px rgba(212, 175, 55, 0.4);
+                    0 0 8px rgba(255, 255, 255, 1),
+                    0 0 16px rgba(255, 255, 255, 0.8),
+                    0 0 24px rgba(212, 175, 55, 0.6),
+                    0 0 32px rgba(212, 175, 55, 0.4);
                 border-color: rgba(212, 175, 55, 0.4);
             }
         }
 
         .cosmic-title:hover {
             text-shadow: 
-                0 0 20px rgba(212, 175, 55, 0.8),
+                0 0 10px rgba(255, 255, 255, 1),
+                0 0 20px rgba(255, 255, 255, 0.9),
+                0 0 30px rgba(212, 175, 55, 0.8),
                 0 0 40px rgba(212, 175, 55, 0.5);
             border-color: rgba(212, 175, 55, 0.6);
         }
 
-        /* Rolling glyphs */
+        /* Rotating runes that change */
         .rolling-glyphs {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: var(--soft-gold);
-            opacity: 0.7;
+            opacity: 0.8;
             margin: 2rem 0;
-            letter-spacing: 2rem;
+            letter-spacing: 3rem;
             text-align: center;
-            animation: glyphFlow 8s ease-in-out infinite alternate;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        @keyframes glyphFlow {
-            from {
-                opacity: 0.5;
-                letter-spacing: 2rem;
+        .rune {
+            display: inline-block;
+            animation: runeRotate 6s ease-in-out infinite;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .rune:nth-child(1) { animation-delay: 0s; }
+        .rune:nth-child(2) { animation-delay: 1s; }
+        .rune:nth-child(3) { animation-delay: 2s; }
+        .rune:nth-child(4) { animation-delay: 3s; }
+        .rune:nth-child(5) { animation-delay: 4s; }
+
+        @keyframes runeRotate {
+            0% { 
+                opacity: 0.6; 
+                transform: scale(1) rotate(0deg);
                 text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
             }
-            to {
-                opacity: 0.9;
-                letter-spacing: 2.5rem;
+            25% { 
+                opacity: 1; 
+                transform: scale(1.2) rotate(90deg);
+                text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+            }
+            50% { 
+                opacity: 0.8; 
+                transform: scale(1) rotate(180deg);
                 text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            }
+            75% { 
+                opacity: 1; 
+                transform: scale(1.1) rotate(270deg);
+                text-shadow: 0 0 12px rgba(212, 175, 55, 0.7);
+            }
+            100% { 
+                opacity: 0.6; 
+                transform: scale(1) rotate(360deg);
+                text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
             }
         }
 
@@ -508,7 +547,13 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="cosmic-title">COSMIC QUILL™</h1>
-                <div class="rolling-glyphs">ᚨᚱᚲᚨᚾᛖ ᚷᚾᚮᛋᛁᛋ ᚨᚹᚨᛁᛏᛋ</div>
+                <div class="rolling-glyphs">
+                    <span class="rune">ᚦ</span>
+                    <span class="rune">ᚱ</span>
+                    <span class="rune">ᚢ</span>
+                    <span class="rune">ᚦ</span>
+                    <span class="rune">ᛋ</span>
+                </div>
                 <p class="tagline">Ancient Truths. Modern Terror.</p>
                 <p class="description">Independent publisher crafting mythic fiction that explores memory, meaning, and the hidden layers of story.</p>
                 <a href="#featured" class="cta-btn">Discover Our Work</a>
