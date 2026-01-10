@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmic Quill™ LLC - Ancient Truths, Modern Terror</title>
     
-    <meta name="description" content="The Bloodline Watchers: The Awakening. Paperback Available Now. Cosmic Quill™ LLC is an independent publisher of mythic fiction and cosmic thrillers.">
+    <meta name="description" content="Cosmic Quill™ LLC is the independent publisher of mythic fiction and cosmic thrillers, including 'The Bloodline Watchers' by Orion R. Veil.">
     <meta name="keywords" content="mythic fiction, cosmic horror, independent publisher, ancient wisdom, bloodline watchers, orion r veil">
-    <meta name="author" content="Cosmic Quill LLC">
+    <meta name="author" content="Orion R. Veil / Cosmic Quill LLC">
     
-    <link rel="icon" type="image/png" href="./cosmic_quill_logo.png">
+    <link rel="icon" type="image/jpeg" href="Cosmic%20Quill%20TM%20Logo.jpg">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap');
@@ -21,14 +21,12 @@
         }
 
         :root {
-            --void-black: #000000;
-            --deep-black: #111111;
+            --void-black: #050506;
+            --deep-black: #0a0a0c;
             --soft-gold: #d4af37;
             --pale-gold: #f4e4bc;
             --ghost-gray: #888888;
             --light-gray: #cccccc;
-            --accent-purple: #6b46c1;
-            --dark-gray: #222222;
         }
 
         body {
@@ -37,19 +35,18 @@
             color: var(--light-gray);
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
         }
 
-        /* Subtle background effect */
-        body::before {
-            content: '';
+        /* CANVAS BACKGROUND (The Floating Stars) */
+        #star-canvas {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 50% 50%, rgba(107, 70, 193, 0.02) 0%, transparent 60%);
+            z-index: -1;
             pointer-events: none;
-            z-index: 1;
         }
 
         .container {
@@ -65,9 +62,9 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            background: rgba(5, 5, 6, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
             z-index: 1000;
         }
 
@@ -75,33 +72,37 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            padding: 10px 0;
         }
 
         .logo {
+            text-decoration: none;
             display: flex;
             align-items: center;
             gap: 15px;
-            text-decoration: none;
-            transition: all 0.3s ease;
         }
 
+        /* LOGO IMAGE STYLING */
         .logo-img {
-            width: 45px;
-            height: 45px;
-            transition: all 0.3s ease;
-        }
-
-        .logo-text {
-            font-family: 'Cinzel', serif;
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--soft-gold);
-            letter-spacing: 1px;
+            height: 50px;
+            width: auto;
+            /* This blends the black background of the JPG into the header */
+            mix-blend-mode: screen; 
+            transition: transform 0.3s ease;
         }
 
         .logo:hover .logo-img {
             transform: scale(1.05);
+            filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+        }
+
+        .logo-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--soft-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .nav-links {
@@ -114,7 +115,7 @@
             font-family: 'Cinzel', serif;
             color: var(--light-gray);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             letter-spacing: 1px;
             text-transform: uppercase;
             transition: color 0.3s ease;
@@ -131,102 +132,71 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            padding-top: 60px; /* Offset for fixed header */
         }
 
-        /* Sharp, mysterious glow - not fuzzy */
         .cosmic-title {
             font-family: 'Cinzel', serif;
-            font-size: 5rem;
+            font-size: clamp(2.5rem, 6vw, 5rem);
             font-weight: 700;
             color: var(--soft-gold);
             margin-bottom: 1rem;
-            text-align: center;
-            letter-spacing: 8px;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 2rem 0;
-            border-top: 1px solid rgba(212, 175, 55, 0.3);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            text-shadow: 
-                0 0 2px rgba(255, 255, 255, 0.9),
-                0 0 4px rgba(255, 255, 255, 0.7),
-                0 0 6px rgba(212, 175, 55, 0.5);
-            animation: sharpGlow 5s ease-in-out infinite alternate;
-            transition: all 0.3s ease;
-            position: relative;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+            animation: breathe 6s ease-in-out infinite;
         }
 
-        @keyframes sharpGlow {
-            from {
-                text-shadow: 
-                    0 0 2px rgba(255, 255, 255, 0.9),
-                    0 0 4px rgba(255, 255, 255, 0.7),
-                    0 0 6px rgba(212, 175, 55, 0.5);
-                border-color: rgba(212, 175, 55, 0.3);
-            }
-            to {
-                text-shadow: 
-                    0 0 3px rgba(255, 255, 255, 1),
-                    0 0 6px rgba(255, 255, 255, 0.8),
-                    0 0 9px rgba(212, 175, 55, 0.7);
-                border-color: rgba(212, 175, 55, 0.5);
-            }
+        @keyframes breathe {
+            0%, 100% { opacity: 0.9; text-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+            50% { opacity: 1; text-shadow: 0 0 25px rgba(212, 175, 55, 0.5); }
         }
 
-        .cosmic-title:hover {
-            text-shadow: 
-                0 0 4px rgba(255, 255, 255, 1),
-                0 0 8px rgba(255, 255, 255, 0.9),
-                0 0 12px rgba(212, 175, 55, 0.8);
-            border-color: rgba(212, 175, 55, 0.7);
-        }
-
-        /* Runes that change to different runes */
+        /* Runes */
         .rolling-glyphs {
             font-size: 1.8rem;
             color: var(--soft-gold);
             opacity: 0.8;
-            margin: 2rem 0;
-            letter-spacing: 3rem;
-            text-align: center;
+            margin: 1.5rem 0;
+            letter-spacing: 2rem;
             height: 2rem;
             display: flex;
             justify-content: center;
-            align-items: center;
         }
 
         .rune {
             display: inline-block;
-            text-shadow: 0 0 3px rgba(212, 175, 55, 0.6);
             transition: opacity 0.3s ease;
-            position: relative;
         }
 
-        .hero .tagline {
-            font-size: 1.4rem;
+        .tagline {
+            font-size: 1.3rem;
             color: var(--ghost-gray);
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             font-style: italic;
             letter-spacing: 1px;
         }
 
-        .hero .description {
-            font-size: 1.2rem;
+        .description {
+            font-size: 1.1rem;
             max-width: 700px;
             margin: 0 auto 3rem;
             color: var(--light-gray);
-            line-height: 1.6;
         }
 
-        /* Simple button */
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         .cta-btn {
             display: inline-block;
-            background: transparent;
-            color: var(--soft-gold);
-            padding: 15px 30px;
-            border: 2px solid var(--soft-gold);
+            padding: 14px 28px;
             font-family: 'Cinzel', serif;
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
             text-decoration: none;
             text-transform: uppercase;
@@ -234,12 +204,29 @@
             transition: all 0.3s ease;
         }
 
-        .cta-btn:hover {
-            background: var(--soft-gold);
-            color: var(--void-black);
+        .btn-gold {
+            background: transparent;
+            color: var(--soft-gold);
+            border: 1px solid var(--soft-gold);
         }
 
-        /* Sections */
+        .btn-gold:hover {
+            background: var(--soft-gold);
+            color: #000;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-ghost {
+            color: var(--ghost-gray);
+            border: 1px solid var(--ghost-gray);
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--pale-gold);
+            color: var(--pale-gold);
+        }
+
+        /* Featured Section */
         .section {
             padding: 80px 0;
             border-top: 1px solid rgba(212, 175, 55, 0.1);
@@ -247,82 +234,71 @@
 
         .section h2 {
             font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: var(--soft-gold);
             text-align: center;
             margin-bottom: 3rem;
         }
 
-        /* Featured work */
         .featured-work {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
-            margin-top: 3rem;
         }
 
         .book-showcase {
             text-align: center;
         }
 
-        /* NEW: Styles for the cover image */
         .book-cover-shadow {
-            max-width: 300px;
+            max-width: 320px;
             width: 100%;
             height: auto;
-            border: 2px solid var(--soft-gold);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--soft-gold);
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
             transition: all 0.3s ease;
             cursor: pointer;
         }
         
         .book-cover-shadow:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
-            border-color: var(--pale-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
         }
 
         .work-details h3 {
             font-family: 'Cinzel', serif;
             font-size: 2rem;
-            color: var(--soft-gold);
+            color: #fff;
             margin-bottom: 0.5rem;
         }
         
         .subtitle {
             font-family: 'Cinzel', serif;
-            font-size: 1.4rem;
-            color: var(--pale-gold);
+            font-size: 1.2rem;
+            color: var(--soft-gold);
             margin-bottom: 1.5rem;
             display: block;
         }
 
-        .work-details p {
-            margin-bottom: 1.5rem;
-            color: var(--light-gray);
-            font-size: 1.1rem;
-        }
-
-        /* Simple cards */
+        /* Archive Grid */
         .archive-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
         }
 
         .archive-item {
-            background: var(--deep-black);
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: rgba(20, 20, 20, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.15);
             padding: 2rem;
             text-align: center;
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
         .archive-item:hover {
             border-color: var(--soft-gold);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
         }
 
         .archive-item h4 {
@@ -330,10 +306,6 @@
             color: var(--soft-gold);
             margin-bottom: 1rem;
             font-size: 1.2rem;
-        }
-
-        .archive-item p {
-            color: var(--light-gray);
         }
 
         /* Footer */
@@ -357,84 +329,46 @@
             margin-bottom: 1rem;
         }
 
-        .footer-section p,
-        .footer-section a {
-            color: var(--light-gray);
+        .footer-section a, .footer-section p {
+            color: var(--ghost-gray);
             text-decoration: none;
-            margin-bottom: 0.5rem;
             display: block;
-            transition: color 0.3s ease;
+            margin-bottom: 0.5rem;
+            transition: 0.3s;
         }
 
-        .footer-section a:hover {
-            color: var(--soft-gold);
-        }
+        .footer-section a:hover { color: var(--soft-gold); }
 
         .copyright {
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             padding-top: 2rem;
-            color: var(--ghost-gray);
+            color: #555;
+            font-size: 0.8rem;
         }
 
-        /* Header logo effects */
-        .logo-img {
-            width: 45px;
-            height: 45px;
-            transition: all 0.3s ease;
-            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
-        }
-
-        .logo-img:hover {
-            animation: quickSpin 2s linear infinite;
-            filter: 
-                drop-shadow(0 0 12px rgba(255, 140, 0, 0.8))
-                drop-shadow(0 0 24px rgba(255, 69, 0, 0.6));
-        }
-
-        @keyframes quickSpin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* Mobile responsive */
+        /* Mobile */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .cosmic-title {
-                font-size: 3rem;
-                letter-spacing: 4px;
-            }
-
-            .cosmic-title::before,
-            .cosmic-title::after {
-                display: none;
-            }
-
-            .featured-work {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
+            .nav-links { display: none; }
+            .featured-work { grid-template-columns: 1fr; text-align: center; }
+            .btn-group { flex-direction: column; width: 100%; }
+            .cta-btn { width: 100%; text-align: center; }
         }
     </style>
 </head>
 <body>
+    <canvas id="star-canvas"></canvas>
+
     <header class="header">
         <nav class="container">
             <div class="nav">
                 <a href="#" class="logo">
-                    <img src="./cosmic_quill_logo.png" class="logo-img" alt="Cosmic Quill Logo">
+                    <img src="Cosmic%20Quill%20TM%20Logo.jpg" alt="Cosmic Quill" class="logo-img">
                     <span class="logo-text">COSMIC QUILL™</span>
                 </a>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#featured">The Book</a></li>
-                    <li><a href="#archive">Archive</a></li>
+                    <li><a href="#featured">Latest Release</a></li>
+                    <li><a href="#archive">The Mission</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -444,7 +378,8 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="cosmic-title">COSMIC QUILL™</h1>
+                <h1 class="cosmic-title">COSMIC QUILL</h1>
+                
                 <div class="rolling-glyphs">
                     <span class="rune">ᚦ</span>
                     <span class="rune">ᚱ</span>
@@ -452,9 +387,13 @@
                     <span class="rune">ᚦ</span>
                     <span class="rune">ᛋ</span>
                 </div>
+                
                 <p class="tagline">Ancient Truths. Modern Terror.</p>
                 <p class="description">Independent publisher crafting mythic fiction that explores memory, meaning, and the hidden layers of story.</p>
-                <a href="#featured" class="cta-btn">Discover Our Work</a>
+                
+                <div class="btn-group">
+                    <a href="#featured" class="cta-btn btn-gold">Latest Release</a>
+                </div>
             </div>
         </div>
     </section>
@@ -465,7 +404,7 @@
             <div class="featured-work">
                 
                 <div class="book-showcase">
-                    <a href="https://a.co/d/erI1eEq" target="_blank">
+                    <a href="https://www.thebloodlinewatchers.com" target="_blank">
                         <img src="Ebook.jpg" alt="The Bloodline Watchers Book Cover" class="book-cover-shadow">
                     </a>
                 </div>
@@ -475,19 +414,14 @@
                     <span class="subtitle">The Awakening</span>
 
                     <p>A cosmic thriller rooted in ancient truth. When forgotten bloodlines awaken and the watchers emerge from shadow, reality itself begins to unravel.</p>
+                    <p>Themes of inherited responsibility, the weight of forgotten histories, and the courage required to break the cycle.</p>
                     
-                    <p>This inaugural release explores themes of inherited responsibility, the weight of forgotten histories, and the courage required to break cycles that have bound families for generations.</p>
-                    
-                    <div style="margin: 2rem 0; padding: 1rem; border-left: 3px solid var(--soft-gold); background: rgba(212, 175, 55, 0.05);">
-                        <p style="color: var(--soft-gold); margin: 0; font-size: 1.1rem; font-family: 'Cinzel', serif; font-weight: 700;">
-                            PAPERBACK AVAILABLE NOW
-                        </p>
-                        <p style="color: var(--ghost-gray); margin: 5px 0 0 0; font-size: 0.9rem;">
-                            eBook Pre-order (Releases Jan 18)
-                        </p>
+                    <div style="margin: 2rem 0;">
+                        <div class="btn-group" style="justify-content: flex-start;">
+                            <a href="https://a.co/d/erI1eEq" class="cta-btn btn-gold" target="_blank">Buy on Amazon</a>
+                            <a href="https://www.thebloodlinewatchers.com" class="cta-btn btn-ghost" target="_blank">Enter The Experience</a>
+                        </div>
                     </div>
-                    
-                    <a href="https://a.co/d/erI1eEq" class="cta-btn" target="_blank">Order on Amazon</a>
                 </div>
             </div>
         </div>
@@ -518,27 +452,66 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <a href="mailto:info@cosmicquill.pub">info@cosmicquill.pub</a>
-                    <a href="mailto:contact@cosmicquill.pub">contact@cosmicquill.pub</a>
-                </div>
-                <div class="footer-section">
-                    <h4>About</h4>
-                    <p>Independent publisher of mythic fiction and cosmic thrillers.</p>
+                    <a href="mailto:orion@cosmicquill.pub">orion@cosmicquill.pub</a>
                 </div>
                 <div class="footer-section">
                     <h4>Company</h4>
-                    <p>Cosmic Quill™ LLC<br>
-                    Independent Publisher</p>
+                    <p>Cosmic Quill™ LLC<br>Independent Publisher</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Cosmic Quill™ LLC. All rights reserved.</p>
+                <p>&copy; 2025–2026 Cosmic Quill™ LLC. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Rune changing functionality
+        // 1. FLOATING STARS (CANVAS)
+        const canvas = document.getElementById('star-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height, particles = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = Math.random() * 1.5; 
+                this.speedX = (Math.random() - 0.5) * 0.2;
+                this.speedY = (Math.random() - 0.5) * 0.2;
+                this.opacity = Math.random() * 0.5;
+                this.life = Math.random() * 100;
+                this.color = Math.random() > 0.8 ? '212, 175, 55' : '150, 150, 150';
+            }
+            update() {
+                this.x += this.speedX; this.y += this.speedY; this.life--;
+                if (this.life < 0 || this.x < 0 || this.x > width || this.y < 0 || this.y > height) this.reset();
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < 60; i++) particles.push(new Particle());
+        
+        function animateStars() {
+            ctx.clearRect(0, 0, width, height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animateStars);
+        }
+        animateStars();
+
+        // 2. RUNE CHANGING
         function initRuneChanging() {
             const runes = document.querySelectorAll('.rune');
             const runeOptions = [
@@ -551,40 +524,24 @@
             
             runes.forEach((rune, index) => {
                 let currentSet = 0;
-                
                 setInterval(() => {
-                    // Fade out
                     rune.style.opacity = '0.3';
-                    
                     setTimeout(() => {
-                        // Change to next rune set
                         currentSet = (currentSet + 1) % runeOptions.length;
                         rune.textContent = runeOptions[currentSet][index];
-                        
-                        // Fade back in
                         rune.style.opacity = '0.8';
                     }, 300);
-                    
                 }, 2000 + (index * 400));
             });
         }
+        document.addEventListener('DOMContentLoaded', initRuneChanging);
 
-        // Initialize everything when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            initRuneChanging();
-        });
-
-        // Smooth scrolling for navigation links
+        // 3. SMOOTH SCROLL
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
     </script>
