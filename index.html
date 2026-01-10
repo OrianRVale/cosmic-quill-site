@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosmic Quill™ LLC - Ancient Truths, Modern Terror</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Cosmic Quill™ LLC is an independent publisher of mythic fiction and cosmic thrillers. Specializing in ancient wisdom disguised as modern narrative.">
-    <meta name="keywords" content="mythic fiction, cosmic horror, independent publisher, ancient wisdom, bloodline watchers">
+    <meta name="description" content="The Bloodline Watchers: The Awakening. Paperback Available Now. Cosmic Quill™ LLC is an independent publisher of mythic fiction and cosmic thrillers.">
+    <meta name="keywords" content="mythic fiction, cosmic horror, independent publisher, ancient wisdom, bloodline watchers, orion r veil">
     <meta name="author" content="Cosmic Quill LLC">
     
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="./cosmic_quill_logo.png">
     
     <style>
@@ -183,7 +181,7 @@
             border-color: rgba(212, 175, 55, 0.7);
         }
 
-        /* Runes that change to different runes (like Bloodline Watchers) */
+        /* Runes that change to different runes */
         .rolling-glyphs {
             font-size: 1.8rem;
             color: var(--soft-gold);
@@ -255,7 +253,7 @@
             margin-bottom: 3rem;
         }
 
-        /* Featured work - much cleaner */
+        /* Featured work */
         .featured-work {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -268,38 +266,36 @@
             text-align: center;
         }
 
-        .book-portal {
-            width: 300px;
-            height: 400px;
-            background: var(--deep-black);
+        /* NEW: Styles for the cover image */
+        .book-cover-shadow {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
             border: 2px solid var(--soft-gold);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
             transition: all 0.3s ease;
             cursor: pointer;
         }
-
-        .book-portal:hover {
-            transform: translateY(-5px);
+        
+        .book-cover-shadow:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
             border-color: var(--pale-gold);
-        }
-
-        .book-portal h3 {
-            font-family: 'Cinzel', serif;
-            color: var(--soft-gold);
-            font-size: 1.6rem;
-            text-align: center;
-            margin-bottom: 1rem;
         }
 
         .work-details h3 {
             font-family: 'Cinzel', serif;
             font-size: 2rem;
             color: var(--soft-gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: var(--pale-gold);
             margin-bottom: 1.5rem;
+            display: block;
         }
 
         .work-details p {
@@ -338,59 +334,6 @@
 
         .archive-item p {
             color: var(--light-gray);
-        }
-
-        /* Newsletter - much simpler */
-        .newsletter {
-            background: var(--deep-black);
-            border: 2px solid var(--soft-gold);
-            padding: 3rem;
-            text-align: center;
-            margin: 3rem 0;
-        }
-
-        .newsletter h3 {
-            font-family: 'Cinzel', serif;
-            color: var(--soft-gold);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .email-form {
-            display: flex;
-            gap: 1rem;
-            max-width: 400px;
-            margin: 2rem auto 0;
-        }
-
-        .email-form input {
-            flex: 1;
-            padding: 12px 15px;
-            background: var(--void-black);
-            border: 1px solid var(--soft-gold);
-            color: var(--light-gray);
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1rem;
-        }
-
-        .email-form input::placeholder {
-            color: var(--ghost-gray);
-        }
-
-        .email-form button {
-            padding: 12px 20px;
-            background: var(--soft-gold);
-            color: var(--void-black);
-            border: none;
-            font-family: 'Cinzel', serif;
-            font-weight: 600;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .email-form button:hover {
-            background: var(--pale-gold);
         }
 
         /* Footer */
@@ -477,15 +420,10 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-
-            .email-form {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <nav class="container">
             <div class="nav">
@@ -503,7 +441,6 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -522,32 +459,40 @@
         </div>
     </section>
 
-    <!-- Featured Work Section -->
     <section id="featured" class="section">
         <div class="container">
             <h2>Featured Release</h2>
             <div class="featured-work">
+                
                 <div class="book-showcase">
-                    <div class="book-portal" onclick="window.open('https://www.thebloodlinewatchers.com', '_blank')">
-                        <h3>The Bloodline<br>Watchers</h3>
-                        <p style="color: var(--ghost-gray); margin-top: 1rem;">Coming Early 2026</p>
-                    </div>
+                    <a href="https://a.co/d/erI1eEq" target="_blank">
+                        <img src="Ebook.jpg" alt="The Bloodline Watchers Book Cover" class="book-cover-shadow">
+                    </a>
                 </div>
+                
                 <div class="work-details">
                     <h3>The Bloodline Watchers</h3>
+                    <span class="subtitle">The Awakening</span>
+
                     <p>A cosmic thriller rooted in ancient truth. When forgotten bloodlines awaken and the watchers emerge from shadow, reality itself begins to unravel.</p>
                     
                     <p>This inaugural release explores themes of inherited responsibility, the weight of forgotten histories, and the courage required to break cycles that have bound families for generations.</p>
                     
-                    <p><strong>Status:</strong> Coming Early 2026</p>
+                    <div style="margin: 2rem 0; padding: 1rem; border-left: 3px solid var(--soft-gold); background: rgba(212, 175, 55, 0.05);">
+                        <p style="color: var(--soft-gold); margin: 0; font-size: 1.1rem; font-family: 'Cinzel', serif; font-weight: 700;">
+                            PAPERBACK AVAILABLE NOW
+                        </p>
+                        <p style="color: var(--ghost-gray); margin: 5px 0 0 0; font-size: 0.9rem;">
+                            eBook Pre-order (Releases Jan 18)
+                        </p>
+                    </div>
                     
-                    <a href="https://www.thebloodlinewatchers.com" class="cta-btn" target="_blank">Explore</a>
+                    <a href="https://a.co/d/erI1eEq" class="cta-btn" target="_blank">Order on Amazon</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Archive Section -->
     <section id="archive" class="section">
         <div class="container">
             <h2>Our Focus</h2>
@@ -568,8 +513,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="footer">
     <footer id="contact" class="footer">
         <div class="container">
             <div class="footer-content">
@@ -595,7 +538,7 @@
     </footer>
 
     <script>
-        // Rune changing functionality (exactly like Bloodline Watchers)
+        // Rune changing functionality
         function initRuneChanging() {
             const runes = document.querySelectorAll('.rune');
             const runeOptions = [
@@ -622,35 +565,8 @@
                         rune.style.opacity = '0.8';
                     }, 300);
                     
-                }, 2000 + (index * 400)); // Staggered timing like Bloodline Watchers
+                }, 2000 + (index * 400));
             });
-        }
-
-        // Handle form submission without errors
-        function handleFormSubmit(event) {
-            event.preventDefault(); // Prevent form from actually submitting
-            const emailInput = event.target.querySelector('input[type="email"]');
-            const email = emailInput.value;
-            
-            // Simple validation
-            if (email && email.includes('@')) {
-                // Show success message
-                emailInput.style.borderColor = '#d4af37';
-                emailInput.value = '';
-                emailInput.placeholder = 'Thank you! We\'ll be in touch.';
-                
-                // Reset after 3 seconds
-                setTimeout(() => {
-                    emailInput.placeholder = 'Enter your email';
-                    emailInput.style.borderColor = '#d4af37';
-                }, 3000);
-            } else {
-                // Show error
-                emailInput.style.borderColor = '#ff4500';
-                emailInput.placeholder = 'Please enter a valid email';
-            }
-            
-            return false; // Ensure form doesn't submit
         }
 
         // Initialize everything when page loads
