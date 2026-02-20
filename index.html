@@ -3,22 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmic Quill™ LLC - Ancient Truths, Modern Terror</title>
+    <title>Cosmic Quill™ LLC | The Bloodline Watchers by Orion R. Veil</title>
     
-    <meta name="description" content="Cosmic Quill™ LLC is the independent publisher of mythic fiction and cosmic thrillers, including 'The Bloodline Watchers' by Orion R. Veil.">
-    <meta name="keywords" content="mythic fiction, cosmic horror, independent publisher, ancient wisdom, bloodline watchers, orion r veil">
-    <meta name="author" content="Orion R. Veil / Cosmic Quill LLC">
+    <meta name="description" content="Official home of 'The Bloodline Watchers: The Awakening.' Cosmic Quill™ LLC is an independent publisher of mythic fiction and cosmic thrillers by Orion R. Veil.">
+    <meta name="keywords" content="The Bloodline Watchers, Orion R. Veil, Cosmic Quill LLC, mythic fiction, cosmic horror, The Awakening book, supernatural thriller, independent publisher">
+    <meta name="author" content="Orion R. Veil">
+    <link rel="canonical" href="https://www.cosmicquill.pub/" />
     
+    <meta property="og:title" content="The Bloodline Watchers | Cosmic Quill™ LLC">
+    <meta property="og:description" content="Discover 'The Awakening.' A cosmic thriller rooted in ancient truth.">
+    <meta property="og:image" content="https://www.cosmicquill.pub/Ebook.jpg">
+    <meta property="og:url" content="https://www.cosmicquill.pub/">
+    <meta property="og:type" content="book">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "The Bloodline Watchers: The Awakening",
+      "author": {
+        "@type": "Person",
+        "name": "Orion R. Veil"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Cosmic Quill LLC"
+      },
+      "url": "https://www.thebloodlinewatchers.com",
+      "sameAs": [
+        "https://books2read.com/thebloodlinewatchers/",
+        "https://a.co/d/erI1eEq"
+      ],
+      "genre": "Cosmic Thriller / Mythic Fiction",
+      "description": "A cosmic thriller rooted in ancient truth. When forgotten bloodlines awaken and the watchers emerge from shadow, reality itself begins to unravel."
+    }
+    </script>
+
     <link rel="icon" type="image/jpeg" href="Cosmic%20Quill%20TM%20Logo.jpg">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap');
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --void-black: #050506;
@@ -38,7 +64,6 @@
             position: relative;
         }
 
-        /* CANVAS BACKGROUND (The Floating Stars) */
         #star-canvas {
             position: fixed;
             top: 0;
@@ -57,7 +82,6 @@
             z-index: 10;
         }
 
-        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -82,11 +106,9 @@
             gap: 15px;
         }
 
-        /* LOGO IMAGE STYLING */
         .logo-img {
             height: 50px;
             width: auto;
-            /* This blends the black background of the JPG into the header */
             mix-blend-mode: screen; 
             transition: transform 0.3s ease;
         }
@@ -121,18 +143,15 @@
             transition: color 0.3s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--soft-gold);
-        }
+        .nav-links a:hover { color: var(--soft-gold); }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding-top: 60px; /* Offset for fixed header */
+            padding-top: 60px;
         }
 
         .cosmic-title {
@@ -152,7 +171,6 @@
             50% { opacity: 1; text-shadow: 0 0 25px rgba(212, 175, 55, 0.5); }
         }
 
-        /* Runes */
         .rolling-glyphs {
             font-size: 1.8rem;
             color: var(--soft-gold);
@@ -164,10 +182,7 @@
             justify-content: center;
         }
 
-        .rune {
-            display: inline-block;
-            transition: opacity 0.3s ease;
-        }
+        .rune { display: inline-block; transition: opacity 0.3s ease; }
 
         .tagline {
             font-size: 1.3rem;
@@ -184,7 +199,6 @@
             color: var(--light-gray);
         }
 
-        /* Buttons */
         .btn-group {
             display: flex;
             gap: 20px;
@@ -226,11 +240,7 @@
             color: var(--pale-gold);
         }
 
-        /* Featured Section */
-        .section {
-            padding: 80px 0;
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
-        }
+        .section { padding: 80px 0; border-top: 1px solid rgba(212, 175, 55, 0.1); }
 
         .section h2 {
             font-family: 'Cinzel', serif;
@@ -247,9 +257,7 @@
             align-items: center;
         }
 
-        .book-showcase {
-            text-align: center;
-        }
+        .book-showcase { text-align: center; }
 
         .book-cover-shadow {
             max-width: 320px;
@@ -281,7 +289,6 @@
             display: block;
         }
 
-        /* Archive Grid */
         .archive-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -296,10 +303,7 @@
             transition: 0.3s;
         }
 
-        .archive-item:hover {
-            border-color: var(--soft-gold);
-            transform: translateY(-3px);
-        }
+        .archive-item:hover { border-color: var(--soft-gold); transform: translateY(-3px); }
 
         .archive-item h4 {
             font-family: 'Cinzel', serif;
@@ -308,7 +312,6 @@
             font-size: 1.2rem;
         }
 
-        /* Footer */
         .footer {
             background: var(--deep-black);
             border-top: 1px solid rgba(212, 175, 55, 0.2);
@@ -346,7 +349,6 @@
             font-size: 0.8rem;
         }
 
-        /* Mobile */
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .featured-work { grid-template-columns: 1fr; text-align: center; }
@@ -362,7 +364,7 @@
         <nav class="container">
             <div class="nav">
                 <a href="#" class="logo">
-                    <img src="Cosmic%20Quill%20TM%20Logo.jpg" alt="Cosmic Quill" class="logo-img">
+                    <img src="Cosmic%20Quill%20TM%20Logo.jpg" alt="Cosmic Quill™ LLC Logo" class="logo-img">
                     <span class="logo-text">COSMIC QUILL™</span>
                 </a>
                 <ul class="nav-links">
@@ -379,18 +381,11 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="cosmic-title">COSMIC QUILL</h1>
-                
                 <div class="rolling-glyphs">
-                    <span class="rune">ᚦ</span>
-                    <span class="rune">ᚱ</span>
-                    <span class="rune">ᚢ</span>
-                    <span class="rune">ᚦ</span>
-                    <span class="rune">ᛋ</span>
+                    <span class="rune">ᚦ</span><span class="rune">ᚱ</span><span class="rune">ᚢ</span><span class="rune">ᚦ</span><span class="rune">ᛋ</span>
                 </div>
-                
                 <p class="tagline">Ancient Truths. Modern Terror.</p>
-                <p class="description">Independent publisher crafting mythic fiction that explores memory, meaning, and the hidden layers of story.</p>
-                
+                <p class="description">Independent publisher of mythic fiction and cosmic thrillers, exploring the hidden layers of story and the awakening of forgotten bloodlines.</p>
                 <div class="btn-group">
                     <a href="#featured" class="cta-btn btn-gold">Latest Release</a>
                 </div>
@@ -402,23 +397,20 @@
         <div class="container">
             <h2>Featured Release</h2>
             <div class="featured-work">
-                
                 <div class="book-showcase">
-                    <a href="https://www.thebloodlinewatchers.com" target="_blank">
-                        <img src="Ebook.jpg" alt="The Bloodline Watchers Book Cover" class="book-cover-shadow">
+                    <a href="https://books2read.com/thebloodlinewatchers/" target="_blank">
+                        <img src="Ebook.jpg" alt="The Bloodline Watchers: The Awakening by Orion R. Veil" class="book-cover-shadow" loading="lazy">
                     </a>
                 </div>
-                
                 <div class="work-details">
                     <h3>The Bloodline Watchers</h3>
                     <span class="subtitle">The Awakening</span>
-
                     <p>A cosmic thriller rooted in ancient truth. When forgotten bloodlines awaken and the watchers emerge from shadow, reality itself begins to unravel.</p>
-                    <p>Themes of inherited responsibility, the weight of forgotten histories, and the courage required to break the cycle.</p>
-                    
+                    <p>By Orion R. Veil. Explore inherited responsibility and the courage required to break the cycle.</p>
                     <div style="margin: 2rem 0;">
                         <div class="btn-group" style="justify-content: flex-start;">
-                            <a href="https://a.co/d/erI1eEq" class="cta-btn btn-gold" target="_blank">Buy on Amazon</a>
+                            <a href="https://a.co/d/erI1eEq" class="cta-btn btn-gold" target="_blank">Amazon</a>
+                            <a href="https://books2read.com/thebloodlinewatchers/" class="cta-btn btn-gold" target="_blank">All Retailers</a>
                             <a href="https://www.thebloodlinewatchers.com" class="cta-btn btn-ghost" target="_blank">Enter The Experience</a>
                         </div>
                     </div>
@@ -429,7 +421,7 @@
 
     <section id="archive" class="section">
         <div class="container">
-            <h2>Our Focus</h2>
+            <h2>The Mission</h2>
             <div class="archive-grid">
                 <div class="archive-item">
                     <h4>Mythic Fiction</h4>
@@ -460,13 +452,12 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025–2026 Cosmic Quill™ LLC. All rights reserved.</p>
+                <p>&copy; 2025–2026 Cosmic Quill™ LLC. All rights reserved. Author: Orion R. Veil.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // 1. FLOATING STARS (CANVAS)
         const canvas = document.getElementById('star-canvas');
         const ctx = canvas.getContext('2d');
         let width, height, particles = [];
@@ -511,15 +502,12 @@
         }
         animateStars();
 
-        // 2. RUNE CHANGING
         function initRuneChanging() {
             const runes = document.querySelectorAll('.rune');
             const runeOptions = [
                 ['ᚦ', 'ᚱ', 'ᚢ', 'ᚦ', 'ᛋ'],
                 ['ᚷ', 'ᚨ', 'ᛒ', 'ᛖ', 'ᛗ'],
-                ['ᛚ', 'ᛁ', 'ᛜ', 'ᛞ', 'ᛟ'],
-                ['ᚠ', 'ᚢ', 'ᚦ', 'ᚨ', 'ᚱ'],
-                ['ᚲ', 'ᚷ', 'ᚹ', 'ᚺ', 'ᚾ']
+                ['ᛚ', 'ᛁ', 'ᛜ', 'ᛞ', 'ᛟ']
             ];
             
             runes.forEach((rune, index) => {
@@ -536,7 +524,6 @@
         }
         document.addEventListener('DOMContentLoaded', initRuneChanging);
 
-        // 3. SMOOTH SCROLL
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
