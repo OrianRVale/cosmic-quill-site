@@ -1,114 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cosmic Quill™ LLC</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Quill™ LLC | The Bloodline Watchers by Orion R. Veil</title>
+    
+    <meta name="description" content="Official home of 'The Bloodline Watchers: The Awakening.' Cosmic Quill™ LLC is an independent publisher of mythic fiction and cosmic thrillers by Orion R. Veil.">
+    <meta name="keywords" content="The Bloodline Watchers, Orion R. Veil, Cosmic Quill LLC, mythic fiction, cosmic horror, The Awakening book, supernatural thriller, independent publisher">
+    <meta name="author" content="Orion R. Veil">
+    <link rel="canonical" href="https://www.cosmicquill.pub/" />
+    
+    <meta property="og:title" content="The Bloodline Watchers | Cosmic Quill™ LLC">
+    <meta property="og:description" content="Discover 'The Awakening.' A cosmic thriller rooted in ancient truth.">
+    <meta property="og:image" content="https://www.cosmicquill.pub/Ebook.jpg">
+    <meta property="og:url" content="https://www.cosmicquill.pub/">
+    <meta property="og:type" content="book">
 
-  <!-- SEO -->
-  <meta name="description" content="Home of The Bloodline Watchers. Cosmic Quill™ is an independent publisher of mythic fiction exploring memory, meaning, and the hidden layers of story.">
-  <meta name="keywords" content="Cosmic Quill, Orion R Vale, Bloodline Watchers, mythic fiction, esoteric fiction, visionary fiction, independent publishing">
-  <meta name="author" content="Orion R Vale">
-  <meta name="robots" content="index, follow">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Cosmic Quill™ LLC">
-  <meta property="og:description" content="Home of The Bloodline Watchers. Cosmic Quill publishes visionary fiction rooted in myth and meaning.">
-  <meta property="og:image" content="https://www.cosmicquill.pub/cosmic_quill_logo.png">
-  <meta property="og:url" content="https://www.cosmicquill.pub/">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cosmic Quill™ LLC">
-  <meta name="twitter:description" content="Home of The Bloodline Watchers. Cosmic Quill publishes visionary fiction rooted in myth and meaning.">
-  <meta name="twitter:image" content="https://www.cosmicquill.pub/cosmic_quill_logo.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/cosmic_quill_logo.png" />
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: 'Georgia', serif;
-      text-align: center;
-      min-height: 100vh;
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "The Bloodline Watchers: The Awakening",
+      "author": {
+        "@type": "Person",
+        "name": "Orion R. Veil"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Cosmic Quill LLC"
+      },
+      "url": "https://www.thebloodlinewatchers.com",
+      "sameAs": [
+        "https://books2read.com/thebloodlinewatchers/",
+        "https://a.co/d/erI1eEq"
+      ],
+      "genre": "Cosmic Thriller / Mythic Fiction",
+      "description": "A cosmic thriller rooted in ancient truth. When forgotten bloodlines awaken and the watchers emerge from shadow, reality itself begins to unravel."
     }
+    </script>
 
-    img.logo {
-      width: 220px;
-      max-width: 90%;
-      height: auto;
-      margin-top: 40px;
-      margin-bottom: 20px;
-    }
+    <link rel="icon" type="image/jpeg" href="Cosmic%20Quill%20TM%20Logo.jpg">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    h1 {
-      font-size: 2.5rem;
-      color: #d4af37;
-      margin: 0;
-    }
+        :root {
+            --void-black: #050506;
+            --deep-black: #0a0a0c;
+            --soft-gold: #d4af37;
+            --pale-gold: #f4e4bc;
+            --ghost-gray: #888888;
+            --light-gray: #cccccc;
+        }
 
-    h2 {
-      font-size: 1.25rem;
-      color: #f5deb3;
-      margin-top: 10px;
-      margin-bottom: 30px;
-    }
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: var(--void-black);
+            color: var(--light-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-    p {
-      max-width: 700px;
-      margin: 0 auto 40px;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #ccc;
-    }
+        #star-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
 
-    .button-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 60px;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
 
-    .button {
-      padding: 12px 24px;
-      background-color: transparent;
-      border: 2px solid #d4af37;
-      color: #d4af37;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background 0.3s, color 0.3s;
-    }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(5, 5, 6, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            z-index: 1000;
+        }
 
-    .button:hover {
-      background-color: #d4af37;
-      color: #000;
-    }
-  </style>
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            mix-blend-mode: screen; 
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover .logo-img {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+        }
+
+        .logo-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--soft-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-family: 'Cinzel', serif;
+            color: var(--light-gray);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover { color: var(--soft-gold); }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .cosmic-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 700;
+            color: var(--soft-gold);
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+            animation: breathe 6s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% { opacity: 0.9; text-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+            50% { opacity: 1; text-shadow: 0 0 25px rgba(212, 175, 55, 0.5); }
+        }
+
+        .rolling-glyphs {
+            font-size: 1.8rem;
+            color: var(--soft-gold);
+            opacity: 0.8;
+            margin: 1.5rem 0;
+            letter-spacing: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .rune { display: inline-block; transition: opacity 0.3s ease; }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--ghost-gray);
+            margin-bottom: 2rem;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            color: var(--light-gray);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 28px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold {
+            background: transparent;
+            color: var(--soft-gold);
+            border: 1px solid var(--soft-gold);
+        }
+
+        .btn-gold:hover {
+            background: var(--soft-gold);
+            color: #000;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-ghost {
+            color: var(--ghost-gray);
+            border: 1px solid var(--ghost-gray);
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--pale-gold);
+            color: var(--pale-gold);
+        }
+
+        .section { padding: 80px 0; border-top: 1px solid rgba(212, 175, 55, 0.1); }
+
+        .section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--soft-gold);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .featured-work {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .book-showcase { text-align: center; }
+
+        .book-cover-shadow {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--soft-gold);
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .book-cover-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .work-details h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: var(--soft-gold);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .archive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .archive-item {
+            background: rgba(20, 20, 20, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 2rem;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .archive-item:hover { border-color: var(--soft-gold); transform: translateY(-3px); }
+
+        .archive-item h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--soft-gold);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer {
+            background: var(--deep-black);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--soft-gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a, .footer-section p {
+            color: var(--ghost-gray);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: 0.3s;
+        }
+
+        .footer-section a:hover { color: var(--soft-gold); }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 2rem;
+            color: #555;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .featured-work { grid-template-columns: 1fr; text-align: center; }
+            .btn-group { flex-direction: column; width: 100%; }
+            .cta-btn { width: 100%; text-align: center; }
+        }
+    </style>
 </head>
 <body>
+    <canvas id="star-canvas"></canvas>
 
-  <img src="cosmic_quill_logo.png" alt="Cosmic Quill Logo" class="logo"/>
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <a href="#" class="logo">
+                    <img src="Cosmic%20Quill%20TM%20Logo.jpg" alt="Cosmic Quill™ LLC Logo" class="logo-img">
+                    <span class="logo-text">COSMIC QUILL™</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#featured">Latest Release</a></li>
+                    <li><a href="#archive">The Mission</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <h1>Cosmic Quill™ LLC</h1>
-  <h2>Where Vision Becomes Myth</h2>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="cosmic-title">COSMIC QUILL</h1>
+                <div class="rolling-glyphs">
+                    <span class="rune">ᚦ</span><span class="rune">ᚱ</span><span class="rune">ᚢ</span><span class="rune">ᚦ</span><span class="rune">ᛋ</span>
+                </div>
+                <p class="tagline">Ancient Truths. Modern Terror.</p>
+                <p class="description">Independent publisher of mythic fiction and cosmic thrillers, exploring the hidden layers of story and the awakening of forgotten bloodlines.</p>
+                <div class="btn-group">
+                    <a href="#featured" class="cta-btn btn-gold">Latest Release</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <p>
-    Home of <b>The Bloodline Watchers</b>. Cosmic Quill™ is an independent publisher crafting mythic fiction that explores memory, meaning, and the hidden layers of story.
-  </p>
+    <section id="featured" class="section">
+        <div class="container">
+            <h2>Featured Release</h2>
+            <div class="featured-work">
+                <div class="book-showcase">
+                    <a href="https://books2read.com/thebloodlinewatchers/" target="_blank">
+                        <img src="Ebook.jpg" alt="The Bloodline Watchers: The Awakening by Orion R. Veil" class="book-cover-shadow" loading="lazy">
+                    </a>
+                </div>
+                <div class="work-details">
+                    <h3>The Bloodline Watchers</h3>
+                    <span class="subtitle">The Awakening</span>
+                    <p>A cosmic thriller rooted in ancient truth. When forgotten bloodlines awaken and the watchers emerge from shadow, reality itself begins to unravel.</p>
+                    <p>By Orion R. Veil. Explore inherited responsibility and the courage required to break the cycle.</p>
+                    <div style="margin: 2rem 0;">
+                        <div class="btn-group" style="justify-content: flex-start;">
+                            <a href="https://a.co/d/erI1eEq" class="cta-btn btn-gold" target="_blank">Amazon</a>
+                            <a href="https://books2read.com/thebloodlinewatchers/" class="cta-btn btn-gold" target="_blank">All Retailers</a>
+                            <a href="https://www.thebloodlinewatchers.com" class="cta-btn btn-ghost" target="_blank">Enter The Experience</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="button-group">
-    <a class="button" href="https://thebloodlinewatchers.com" target="_blank">Explore Bloodline Watchers</a>
-    <a class="button" href="shop.html">Shop</a>
-    <a class="button" href="mailto:orionrvale@gmail.com?subject=Inquiry%20from%20Cosmic%20Quill%20Site">Contact Us</a>
-  </div>
+    <section id="archive" class="section">
+        <div class="container">
+            <h2>The Mission</h2>
+            <div class="archive-grid">
+                <div class="archive-item">
+                    <h4>Mythic Fiction</h4>
+                    <p>Stories that bridge ancient wisdom and modern experience, revealing timeless truths through contemporary narrative.</p>
+                </div>
+                <div class="archive-item">
+                    <h4>Cosmic Thrillers</h4>
+                    <p>Where psychological suspense meets cosmic horror, exploring the terror of discovering what lies beyond human understanding.</p>
+                </div>
+                <div class="archive-item">
+                    <h4>Hidden Histories</h4>
+                    <p>Narratives that uncover the forgotten bloodlines and secret knowledge that have shaped our world from the shadows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <a href="mailto:orion@cosmicquill.pub">orion@cosmicquill.pub</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <p>Cosmic Quill™ LLC<br>Independent Publisher</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025–2026 Cosmic Quill™ LLC. All rights reserved. Author: Orion R. Veil.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById('star-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height, particles = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = Math.random() * 1.5; 
+                this.speedX = (Math.random() - 0.5) * 0.2;
+                this.speedY = (Math.random() - 0.5) * 0.2;
+                this.opacity = Math.random() * 0.5;
+                this.life = Math.random() * 100;
+                this.color = Math.random() > 0.8 ? '212, 175, 55' : '150, 150, 150';
+            }
+            update() {
+                this.x += this.speedX; this.y += this.speedY; this.life--;
+                if (this.life < 0 || this.x < 0 || this.x > width || this.y < 0 || this.y > height) this.reset();
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${this.color}, ${this.opacity})`;
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < 60; i++) particles.push(new Particle());
+        
+        function animateStars() {
+            ctx.clearRect(0, 0, width, height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animateStars);
+        }
+        animateStars();
+
+        function initRuneChanging() {
+            const runes = document.querySelectorAll('.rune');
+            const runeOptions = [
+                ['ᚦ', 'ᚱ', 'ᚢ', 'ᚦ', 'ᛋ'],
+                ['ᚷ', 'ᚨ', 'ᛒ', 'ᛖ', 'ᛗ'],
+                ['ᛚ', 'ᛁ', 'ᛜ', 'ᛞ', 'ᛟ']
+            ];
+            
+            runes.forEach((rune, index) => {
+                let currentSet = 0;
+                setInterval(() => {
+                    rune.style.opacity = '0.3';
+                    setTimeout(() => {
+                        currentSet = (currentSet + 1) % runeOptions.length;
+                        rune.textContent = runeOptions[currentSet][index];
+                        rune.style.opacity = '0.8';
+                    }, 300);
+                }, 2000 + (index * 400));
+            });
+        }
+        document.addEventListener('DOMContentLoaded', initRuneChanging);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
 </body>
 </html>
