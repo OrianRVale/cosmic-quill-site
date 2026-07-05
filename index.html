@@ -6,12 +6,12 @@
     <title>The Bloodline Watchers Series | By Orion R. Veil</title>
     
     <meta name="description" content="Official home of The Bloodline Watchers series by Orion R. Veil. Enter a world of mythic fiction, ancient bloodlines, and supernatural thrillers.">
-    <meta name="keywords" content="The Bloodline Watchers, Orion R. Veil, mythic fiction, cosmic horror, The Awakening book, The Covenant book, supernatural thriller, dark fantasy">
+    <meta name="keywords" content="The Bloodline Watchers, Orion R. Veil, Cosmic Quill, mythic fiction, cosmic horror, The Awakening book, The Covenant book, supernatural thriller, dark fantasy">
     <meta name="author" content="Orion R. Veil">
     <link rel="canonical" href="https://www.cosmicquill.pub/" />
     
     <meta property="og:title" content="The Bloodline Watchers Series | Orion R. Veil">
-    <meta property="og:description" content="Remember who you are. Discover a cosmic thriller rooted in ancient truth.">
+    <meta property="og:description" content="Remember who you are. Discover a supernatural thriller series rooted in ancient truth.">
     <meta property="og:image" content="https://www.cosmicquill.pub/Ebook.jpg">
     <meta property="og:url" content="https://www.cosmicquill.pub/">
     <meta property="og:type" content="website">
@@ -153,14 +153,32 @@
 
         .cosmic-title {
             font-family: 'Cinzel', serif;
-            font-size: clamp(2rem, 5vw, 4.5rem);
+            font-size: clamp(2.2rem, 5.5vw, 4.8rem);
             font-weight: 700;
             color: var(--soft-gold);
-            margin-bottom: 1rem;
-            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
             text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
             animation: breathe 6s ease-in-out infinite;
+        }
+
+        .hero-series-label {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            color: var(--pale-gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-author-byline {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            color: var(--ghost-gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
         }
 
         @keyframes breathe {
@@ -172,7 +190,7 @@
             font-size: 1.8rem;
             color: var(--soft-gold);
             opacity: 0.8;
-            margin: 1.5rem 0;
+            margin: 1rem 0;
             letter-spacing: 2rem;
             height: 2rem;
             display: flex;
@@ -319,7 +337,6 @@
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
         }
 
-        /* AUTHOR SECTION STYLES - Restored Grid with Photo */
         .author-wrapper {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -413,9 +430,10 @@
                 </a>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#upcoming">Upcoming Release</a></li>
-                    <li><a href="#featured">Available Now</a></li>
+                    <li><a href="#featured">Featured Release</a></li>
+                    <li><a href="#upcoming">Coming Soon</a></li>
                     <li><a href="#author">The Architect</a></li>
+                    <li><a href="#purchase">Start the Journey</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -425,37 +443,20 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
+                <h2 class="hero-series-label">A Supernatural Thriller Series</h2>
                 <h1 class="cosmic-title">THE BLOODLINE WATCHERS</h1>
+                <h3 class="hero-author-byline">by Orion R. Veil</h3>
+                
                 <div class="rolling-glyphs">
                     <span class="rune" aria-hidden="true">ᚦ</span><span class="rune" aria-hidden="true">ᚱ</span><span class="rune" aria-hidden="true">ᚢ</span><span class="rune" aria-hidden="true">ᚦ</span><span class="rune" aria-hidden="true">ᛋ</span>
                 </div>
                 
                 <p class="tagline">"Remember who you are."</p>
-                <p class="description">Hidden History. Ancient Bloodlines. Supernatural Thrillers. Enter a world where hidden orders shape history, and the greatest truths are remembered—not discovered.</p>
+                <p class="description">Hidden History. Ancient Bloodlines. Enter a world where hidden orders shape history, and the greatest truths are remembered—not discovered.</p>
                 
                 <div class="btn-group">
-                    <a href="#featured" class="cta-btn btn-gold">Read The Awakening</a>
-                    <a href="#upcoming" class="cta-btn btn-ghost">The Covenant</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="upcoming" class="section">
-        <div class="container">
-            <h2>Upcoming Release</h2>
-            <div class="featured-work">
-                <div class="book-showcase">
-                    <div class="cover-placeholder">
-                        <span style="font-size: 1.5rem; letter-spacing: 2px;">COVER</span>
-                        <span style="font-size: 1rem; color: var(--ghost-gray);">REVEALED SOON</span>
-                    </div>
-                </div>
-                <div class="work-details">
-                    <h3>The Bloodline Watchers</h3>
-                    <span class="subtitle">The Covenant</span>
-                    <p>The highly anticipated next chapter in the mythic thriller series continues the story of the forgotten bloodlines and the watchers lurking in the shadows.</p>
-                    <p class="release-date">Releasing This Summer</p>
+                    <a href="#featured" class="cta-btn btn-gold">Begin the Story</a>
+                    <a href="#upcoming" class="cta-btn btn-ghost">Discover the World</a>
                 </div>
             </div>
         </div>
@@ -463,25 +464,41 @@
 
     <section id="featured" class="section">
         <div class="container">
-            <h2>Available Now</h2>
+            <h2>Featured Release</h2>
             <div class="featured-work">
                 <div class="book-showcase">
-                    <a href="https://books2read.com/thebloodlinewatchers/" target="_blank">
+                    <a href="#purchase">
                         <img src="Ebook.jpg" alt="The Bloodline Watchers: The Awakening by Orion R. Veil" class="book-cover-shadow" loading="lazy">
                     </a>
                 </div>
                 <div class="work-details">
                     <h3>The Bloodline Watchers</h3>
-                    <span class="subtitle">The Awakening</span>
+                    <span class="subtitle">Book One: The Awakening</span>
                     <p>A cosmic thriller rooted in ancient truth. When forgotten bloodlines awaken and the watchers emerge from shadow, reality itself begins to unravel.</p>
-                    <p>By Orion R. Veil. Explore inherited responsibility and the courage required to break the cycle.</p>
-                    <div style="margin: 2rem 0;">
-                        <div class="btn-group" style="justify-content: flex-start;">
-                            <a href="https://a.co/d/erI1eEq" class="cta-btn btn-gold" target="_blank">Amazon</a>
-                            <a href="https://books2read.com/thebloodlinewatchers/" class="cta-btn btn-gold" target="_blank">All Retailers</a>
-                            <a href="https://www.thebloodlinewatchers.com" class="cta-btn btn-ghost" target="_blank">Enter The Experience</a>
-                        </div>
+                    <p>Explore inherited responsibility and the courage required to break the cycle. Start the journey today across major retailers.</p>
+                    <div style="margin-top: 2rem;">
+                        <a href="#purchase" class="cta-btn btn-gold">Acquire Book One</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="upcoming" class="section">
+        <div class="container">
+            <h2>Coming Soon</h2>
+            <div class="featured-work">
+                <div class="book-showcase">
+                    <div class="cover-placeholder">
+                        <span style="font-size: 1.5rem; letter-spacing: 2px;">COVER REVEAL</span>
+                        <span style="font-size: 1rem; color: var(--ghost-gray); margin-top: 0.5rem;">COMING SOON</span>
+                    </div>
+                </div>
+                <div class="work-details">
+                    <h3>The Bloodline Watchers</h3>
+                    <span class="subtitle">Book Two: The Covenant</span>
+                    <p>The highly anticipated next chapter in the supernatural thriller series continues the story of the forgotten bloodlines and the architectures lurking in the deep corridors.</p>
+                    <p class="release-date">Releasing This Summer</p>
                 </div>
             </div>
         </div>
@@ -495,11 +512,23 @@
                 <div class="author-info">
                     <h3>Orion R. Veil</h3>
                     <p>Orion R. Veil writes at the intersection of forgotten history and cosmic terror. Drawing from ancient mythos, esoteric traditions, and the shadows of modern reality, Veil’s work invites readers to question what is myth, and what is memory.</p>
-                    <p>To receive automatic updates on new releases, including the launch of <em>The Covenant</em>, follow Orion on Amazon.</p>
-                    <div style="margin-top: 2rem;">
-                        <a href="https://www.amazon.com/stores/Orion-R.-Veil/author/B0GFSW5X6V" class="cta-btn btn-gold" target="_blank">Follow on Amazon</a>
-                    </div>
+                    <p>To receive automatic updates on upcoming releases across the series expansion, connect via the official author profiles below.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="purchase" class="section">
+        <div class="container" style="text-align: center;">
+            <h2>Start the Journey</h2>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: -1.5rem auto 3rem; color: var(--ghost-gray);">
+                Step into the expanding universe of The Bloodline Watchers series.
+            </p>
+            <div class="btn-group">
+                <a href="https://a.co/d/erI1eEq" class="cta-btn btn-gold" target="_blank">Amazon</a>
+                <a href="https://books2read.com/thebloodlinewatchers/" class="cta-btn btn-gold" target="_blank">All Retailers</a>
+                <a href="https://www.thebloodlinewatchers.com" class="cta-btn btn-ghost" target="_blank">Enter The Experience</a>
+                <a href="https://www.amazon.com/stores/Orion-R.-Veil/author/B0GFSW5X6V" class="cta-btn btn-ghost" target="_blank">Follow Author on Amazon</a>
             </div>
         </div>
     </section>
@@ -508,17 +537,19 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Contact</h4>
+                    <h4>Contact Imprint</h4>
                     <a href="mailto:orion@cosmicquill.pub">orion@cosmicquill.pub</a>
                 </div>
                 <div class="footer-section">
-                    <h4>The Books</h4>
-                    <p><a href="#featured">The Awakening</a><br>
-                    <a href="#upcoming">The Covenant</a></p>
+                    <h4>The Series</h4>
+                    <p>
+                        <a href="#featured">Book 1: The Awakening</a><br>
+                        <a href="#upcoming">Book 2: The Covenant</a>
+                    </p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025–2026 Orion R. Veil | Cosmic Quill™ LLC. All rights reserved.</p>
+                <p>&copy; 2025–2026 Orion R. Veil | Published by Cosmic Quill™ LLC. All rights reserved.</p>
             </div>
         </div>
     </footer>
