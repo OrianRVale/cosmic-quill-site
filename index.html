@@ -41,7 +41,8 @@
         "name": "Orion R. Veil",
         "sameAs": [
           "https://www.amazon.com/stores/Orion-R.-Veil/author/B0GFSW5X6V",
-          "https://www.goodreads.com/author/show/67637292.Orion_R_Veil"
+          "https://www.goodreads.com/author/show/67637292.Orion_R_Veil",
+          "https://www.tiktok.com/@orion144newearth"
         ]
       },
       "publisher": {
@@ -143,7 +144,8 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.8rem;
+            align-items: center;
         }
 
         .nav-links a {
@@ -367,6 +369,85 @@
             line-height: 1.8;
         }
 
+        /* READER MAGNET NEWSLETTER FORM STYLES */
+        .newsletter-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(10, 10, 12, 0.85);
+            border: 1px solid var(--soft-gold);
+            padding: 3.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+            position: relative;
+        }
+
+        .newsletter-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--soft-gold);
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .newsletter-card p {
+            font-size: 1.15rem;
+            color: var(--light-gray);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            max-width: 550px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            min-width: 260px;
+            padding: 14px 18px;
+            background: rgba(5, 5, 6, 0.9);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: #fff;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .newsletter-input:focus {
+            border-color: var(--soft-gold);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        }
+
+        /* SOCIAL MEDIA BADGES & HUB */
+        .social-proof-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 6px 16px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: var(--pale-gold);
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-proof-badge:hover {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: var(--soft-gold);
+        }
+
         .footer {
             background: var(--deep-black);
             border-top: 1px solid rgba(212, 175, 55, 0.2);
@@ -376,7 +457,7 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
@@ -411,6 +492,8 @@
             .cta-btn { width: 100%; text-align: center; }
             .author-wrapper { grid-template-columns: 1fr; text-align: center; padding: 2rem 1rem; }
             .author-photo { max-width: 250px; margin: 0 auto; }
+            .newsletter-form { flex-direction: column; width: 100%; }
+            .newsletter-input { width: 100%; }
         }
     </style>
 </head>
@@ -429,8 +512,8 @@
                     <li><a href="#featured">Featured Release</a></li>
                     <li><a href="#awakening">Book I</a></li>
                     <li><a href="#author">The Architect</a></li>
+                    <li><a href="#dispatch">The Dispatch</a></li>
                     <li><a href="#purchase">Start Journey</a></li>
-                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -439,6 +522,10 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
+                <!-- TikTok Social Proof Banner Linked to @orion144newearth -->
+                <a href="https://www.tiktok.com/@orion144newearth" target="_blank" rel="noopener" class="social-proof-badge">
+                    ⚡ Joined by 2,600+ Watchers on TikTok
+                </a>
                 <h2 class="hero-series-label">A Supernatural Thriller Series</h2>
                 <h1 class="cosmic-title">THE BLOODLINE WATCHERS</h1>
                 <h3 class="hero-author-byline">by Orion R. Veil</h3>
@@ -452,7 +539,7 @@
                 
                 <div class="btn-group">
                     <a href="https://www.thebloodlinewatchers.com" class="cta-btn btn-gold" target="_blank" rel="noopener">Enter The Official Reader Portal</a>
-                    <a href="#featured" class="cta-btn btn-ghost">Explore Featured Title</a>
+                    <a href="#dispatch" class="cta-btn btn-ghost">Join The Order</a>
                 </div>
             </div>
         </div>
@@ -521,18 +608,33 @@
         </div>
     </section>
 
-    <!-- PURCHASE GATEWAY -->
+    <!-- READER MAGNET NEWSLETTER DISPATCH SECTION -->
+    <section id="dispatch" class="section">
+        <div class="container">
+            <div class="newsletter-card">
+                <h3>The Watcher Dispatch</h3>
+                <p>Enter your email address to unlock confidential series updates, lore drops, early cover previews, and priority alerts for <em>The Covenant</em> release.</p>
+                
+                <form class="newsletter-form" action="#" method="post" onsubmit="alert('Signal Verified. Welcome to the Order.'); return false;">
+                    <input type="email" class="newsletter-input" placeholder="Enter your transmission address..." required>
+                    <button type="submit" class="cta-btn btn-gold">Unlock Dossier</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- PURCHASE & SOCIAL GATEWAY -->
     <section id="purchase" class="section">
         <div class="container" style="text-align: center;">
-            <h2>Start the Journey</h2>
+            <h2>Series Vault & Social Channels</h2>
             <p style="font-size: 1.2rem; max-width: 600px; margin: -1.5rem auto 3rem; color: var(--ghost-gray);">
-                Step into the expanding universe of The Bloodline Watchers series.
+                Connect across official transmission networks or acquire the archives.
             </p>
             <div class="btn-group">
-                <a href="https://www.thebloodlinewatchers.com" class="cta-btn btn-gold" target="_blank" rel="noopener">Interactive Reader Hub</a>
-                <a href="https://a.co/d/erI1eEq" class="cta-btn btn-gold" target="_blank" rel="noopener">Amazon Book 1</a>
-                <a href="https://a.co/d/000C4vQN" class="cta-btn btn-gold" target="_blank" rel="noopener">Amazon Book 2</a>
-                <a href="https://www.amazon.com/stores/Orion-R.-Veil/author/B0GFSW5X6V" class="cta-btn btn-ghost" target="_blank" rel="noopener">Follow Author on Amazon</a>
+                <a href="https://www.tiktok.com/@orion144newearth" class="cta-btn btn-gold" target="_blank" rel="noopener">TikTok (2.6k Watchers)</a>
+                <a href="https://www.instagram.com/orionrveil" class="cta-btn btn-gold" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://a.co/d/000C4vQN" class="cta-btn btn-gold" target="_blank" rel="noopener">Amazon Pre-Order</a>
+                <a href="https://www.amazon.com/stores/Orion-R.-Veil/author/B0GFSW5X6V" class="cta-btn btn-ghost" target="_blank" rel="noopener">Amazon Author Page</a>
             </div>
         </div>
     </section>
@@ -544,6 +646,11 @@
                     <h4>Contact Imprint</h4>
                     <a href="mailto:orion@cosmicquill.pub">orion@cosmicquill.pub</a>
                     <p style="margin-top: 10px; font-size: 0.9rem; color: var(--ghost-gray);">Official Series Hub: <a href="https://www.thebloodlinewatchers.com" target="_blank" rel="noopener" style="display:inline; text-decoration:underline;">thebloodlinewatchers.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Nodes</h4>
+                    <a href="https://www.tiktok.com/@orion144newearth" target="_blank" rel="noopener">TikTok (@orion144newearth)</a>
+                    <a href="https://www.instagram.com/orionrveil" target="_blank" rel="noopener">Instagram (@orionrveil)</a>
                 </div>
                 <div class="footer-section">
                     <h4>The Series</h4>
