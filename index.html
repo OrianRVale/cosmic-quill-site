@@ -12,17 +12,17 @@
     <!-- Hero Canonical Pointer -->
     <link rel="canonical" href="https://www.thebloodlinewatchers.com/" />
     
-    <!-- Open Graph & Twitter Previews: Using Book 2 Cover -->
+    <!-- Open Graph & Twitter Previews: Widescreen 3D Mockup Banner -->
     <meta property="og:title" content="The Bloodline Watchers: The Covenant | Orion R. Veil">
     <meta property="og:description" content="The awakening was only the beginning. Ancient bloodlines are rising. Are you ready?">
-    <meta property="og:image" content="https://www.thebloodlinewatchers.com/RV-01-The%20Bloodline%20Watchers-02.jpg">
+    <meta property="og:image" content="covenant-banner.jpg">
     <meta property="og:url" content="https://www.thebloodlinewatchers.com/">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="The Bloodline Watchers: The Covenant | Orion R. Veil">
     <meta name="twitter:description" content="The awakening was only the beginning. Ancient bloodlines are rising.">
-    <meta name="twitter:image" content="https://www.thebloodlinewatchers.com/RV-01-The%20Bloodline%20Watchers-02.jpg">
+    <meta name="twitter:image" content="covenant-banner.jpg">
 
     <!-- Font Preconnects for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -282,6 +282,27 @@
             color: var(--soft-gold);
             text-align: center;
             margin-bottom: 3rem;
+        }
+
+        /* Widescreen Banner Styling for Book 2 */
+        .banner-showcase {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .banner-img {
+            width: 100%;
+            max-width: 1100px;
+            height: auto;
+            border: 1px solid var(--soft-gold);
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+
+        .banner-img:hover {
+            transform: scale(1.01);
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.35);
         }
 
         .featured-work {
@@ -545,25 +566,26 @@
         </div>
     </section>
 
-    <!-- PRIMARY FEATURED RELEASE: BOOK TWO (COVENANT COVER) -->
+    <!-- PRIMARY FEATURED RELEASE: BOOK TWO (FEATURING COVENANT BANNER MOCKUP) -->
     <section id="featured" class="section">
         <div class="container">
             <h2>Featured Release</h2>
-            <div class="featured-work">
-                <div class="book-showcase">
-                    <a href="https://books2read.com/TheBloodlineWatchers-TheCovenant" target="_blank" rel="noopener">
-                        <img src="RV-01-The%20Bloodline%20Watchers-02.jpg" alt="The Bloodline Watchers: The Covenant by Orion R. Veil" class="book-cover-shadow" width="320" height="480" fetchpriority="high" decoding="async">
-                    </a>
-                </div>
-                <div class="work-details">
-                    <h3>The Bloodline Watchers</h3>
-                    <span class="subtitle">Book Two: The Covenant</span>
-                    <p>The awakening was only the beginning. Ancient bloodlines are rising. Hidden covenants awaken, old alliances are tested, and the war beneath history begins to reveal itself.</p>
-                    <p class="release-date">Coming August 13, 2026</p>
-                    <div class="btn-group" style="justify-content: flex-start; margin-top: 1.5rem;">
-                        <a href="https://a.co/d/000C4vQN" target="_blank" rel="noopener" class="cta-btn btn-gold">Pre-Order Amazon</a>
-                        <a href="https://books2read.com/TheBloodlineWatchers-TheCovenant" target="_blank" rel="noopener" class="cta-btn btn-gold">All Retailers</a>
-                    </div>
+            
+            <!-- High Impact Widescreen 3D Banner Asset -->
+            <div class="banner-showcase">
+                <a href="https://books2read.com/TheBloodlineWatchers-TheCovenant" target="_blank" rel="noopener">
+                    <img src="covenant-banner.jpg" alt="The Bloodline Watchers: The Covenant - Paperback, Tablet & Mobile Editions" class="banner-img" fetchpriority="high" decoding="async">
+                </a>
+            </div>
+
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h3 style="font-family: 'Cinzel', serif; font-size: 2.2rem; color: #fff; margin-bottom: 0.5rem;">The Bloodline Watchers</h3>
+                <span class="subtitle">Book Two: The Covenant</span>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">The awakening was only the beginning. Ancient bloodlines are rising. Hidden covenants awaken, old alliances are tested, and the war beneath history begins to reveal itself.</p>
+                <p class="release-date">Coming August 13, 2026</p>
+                <div class="btn-group" style="justify-content: center; margin-top: 1.8rem;">
+                    <a href="https://a.co/d/000C4vQN" target="_blank" rel="noopener" class="cta-btn btn-gold">Pre-Order Amazon</a>
+                    <a href="https://books2read.com/TheBloodlineWatchers-TheCovenant" target="_blank" rel="noopener" class="cta-btn btn-gold">All Retailers</a>
                 </div>
             </div>
         </div>
